@@ -17,7 +17,7 @@ export default function Home() {
 				456
       </main>
 
-		<Footer/>
+			<Footer/>
     </div>
   )
 }
