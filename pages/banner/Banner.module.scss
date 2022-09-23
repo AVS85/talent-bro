@@ -1,0 +1,34 @@
+.wrapper {
+	/* border: 2px solid red; */
+	background: #9A33FE;
+}
+
+.container {
+	// border: 1px solid red;
+	padding: 90px 0;
+
+	background-image: url('./assets/bird.svg');
+	background-position: 25px 100%;
+	background-repeat: no-repeat;
+	background-size: 185px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	@media (max-width: 768px) {
+		background-size: 90px;
+	}
+	@media (max-width: 998px) {
+		background-size: 120px;
+	}
+}
+
+.wrapper header {
+	color: #FFFFFF;
+	font-family: 'main500';
+	font-size: 30px;
+	line-height: 30px;
+	min-width: 250px;
+	padding-bottom: 50px;
+}

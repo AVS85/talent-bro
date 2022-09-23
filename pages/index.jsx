@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 import {Footer} from '../components/footer/Footer'
+import {Banner} from './banner/Banner'
 
 export default function Home() {
   return (
@@ -14,9 +15,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-				456
+				main
       </main>
 
+			<Banner/>
 			<Footer/>
     </div>
   )
