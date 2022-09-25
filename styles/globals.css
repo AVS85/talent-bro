@@ -15,12 +15,12 @@
   src: url('/fonts/GraphikLCG-Light.ttf');
 }
 @font-face {
-  font-family: 'main400';
-  src: url('/fonts/GraphikLCG-Medium.ttf');
+	font-family: 'main400';
+	src: url('/fonts/GraphikLCG-Regular.ttf');
 }
 @font-face {
-	font-family: 'main500';
-  src: url('/fonts/GraphikLCG-Regular.ttf');
+  font-family: 'main500';
+  src: url('/fonts/GraphikLCG-Medium.ttf');
 }
 @font-face {
 	font-family: 'main700';

@@ -1,15 +1,15 @@
+@import "../../styles/colors.module";
+
 .wrapper {
 	border: 1px solid #717171;
-
+	background: $bgAlt;
+	color: $textGrey;
+	font-family: 'main400';
+	font-size: 20px;
+	line-height: 20px;
 }
 .footer {
-  /* border-top: 1px solid #da1616; */
-	background: #F5F5F5;
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-	padding: 65px 0px;
+	padding: 65px 15px;
 }
 
 .footer a {
@@ -17,6 +17,23 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.footer li {
+	color: $textGrey;
+	padding: 0 0 20px 0;
+	&.select {
+		color: $textAcc;
+	}
+}
+
+.social {
+	padding-top: 40px;
 }
 
 /* .title a {

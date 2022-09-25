@@ -2,7 +2,8 @@ import Head from 'next/head'
 // import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import {Footer} from '../components/footer/Footer'
+import {Footer} from './footer/Footer'
+import {ContactForm} from './contact-form/ContactForm'
 import {Banner} from './banner/Banner'
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       </main>
 
 			<Banner/>
+			<ContactForm/>
 			<Footer/>
     </div>
   )
