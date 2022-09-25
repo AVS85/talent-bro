@@ -11,14 +11,15 @@ export function Input({
 }){
 	return (
 		<section className={styles.wrapper}>
-			<TextField id={id} label={label} variant={variant} 
+			<input className={styles.input} type="text" placeholder={label} />
+			{/* <TextField id={id} label={label} variant={variant} 
 				className={styles.textField}
 				// sx={{
 				// 	borderBottom: '1px solid red',
 				// 	fontSize: '20px',
 				// 	width: '100%'
 				// }}
-				/>
+				/> */}
 		</section>
 	)
 } 

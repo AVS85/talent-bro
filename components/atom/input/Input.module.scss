@@ -2,7 +2,7 @@
 
 .wrapper {
 	.textField {
-		width: 100%,
+		width: 100%;
 		// background: $elemAcc;
 		// border: 2px solid #FFFFFF;
 		// border-radius: 25px;
@@ -10,5 +10,19 @@
 		// font-family: 'main400';
 		// font-size: 25px;
 		// line-height: 25px;
+	}
+	.input {
+		border: 0;
+		border-bottom: 1px solid #000000;
+		font-family: 'main500';
+		font-size: 20px;
+		line-height: 20px;
+		padding: 18px 0;
+		outline: none;
+		width: 100%;
+		:active, :hover, :focus {
+			outline: 0;
+			outline-offset: 0;
+		}
 	}
 }

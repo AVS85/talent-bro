@@ -45,18 +45,30 @@ export function ContactForm(){
 					md={6}
 					// sx={{border: '1px solid red'}} 
 					>
-						<Box>
+						<Box sx={{pb: '20px'	}}>
 							<Input id="standard-basic" label="Ваше имя*" variant="standard" />
 						</Box>
-						<Box>
+						<Box sx={{pb: '20px'	}}>
 							<Input id="standard-basic" label="E-mail*" variant="standard"/>
 						</Box>
-						<Box>
+						<Box sx={{pb: '20px'	}}>
 							<Input id="standard-basic" label="Телефон" variant="standard"/>
 						</Box>
-						<Box>
-							<div>Прикрепите резюме<br />PDF, DOCX</div>
+						<Box sx={{
+							pb: '20px',
+							mb: '20px',
+							display: 'flex',
+							justifyContent: 'space-between',
+						}}>
+							<div><b>Прикрепите резюме</b><br />PDF, DOCX</div>
 							<Button styleName={'alt'} title={'Загрузить файлы'}></Button>
+						</Box>
+						<Box sx={{
+							pb: '20px',
+							display: 'flex',
+						}}>
+							<input type="checkbox"></input>
+							<div>Я принимаю условия оферты</div>
 						</Box>
 	        </Grid>
 
