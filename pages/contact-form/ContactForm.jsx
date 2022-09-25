@@ -29,7 +29,7 @@ export function ContactForm(){
 						// border: '1px solid red',
 						display: 'flex',
 						flexDirection: 'column',
-						justifyContent: 'space-between'
+						// justifyContent: 'space-between'
 					}}
 					>
 						<div className={styles.titleWrapper}>
@@ -65,11 +65,19 @@ export function ContactForm(){
 						</Box>
 						<Box sx={{
 							pb: '20px',
+							mb: '90px',
 							display: 'flex',
 						}}>
 							<input type="checkbox"></input>
 							<div>Я принимаю условия оферты</div>
 						</Box>
+						{/* <Box sx={{
+							pb: '20px',
+							display: 'flex',
+						}}>
+							*Обязательное поле
+						</Box> */}
+						
 	        </Grid>
 
 	      </Grid>

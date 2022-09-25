@@ -1,0 +1,28 @@
+@import "../../../styles/colors.module";
+
+.wrapper {
+	.title {
+		position: relative;
+		font-family: 'main600';
+		font-size: 40px;
+		line-height: 40px;
+
+		&.underline::before {
+			content: '';
+			position: absolute;
+			bottom: -15px;
+			left: 0px;
+			height: 7px;
+			width: 219px;
+			background-image: url('./assets/line.png');
+			background-repeat: no-repeat;
+			// background-size: 75px;
+		}
+	}
+	.subtitle {
+		font-family: 'main500';
+		font-size: 20px;
+		line-height: 20px;
+		margin-top: 24px;
+	}
+}

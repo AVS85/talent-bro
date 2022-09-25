@@ -23,6 +23,10 @@
   src: url('/fonts/GraphikLCG-Medium.ttf');
 }
 @font-face {
+  font-family: 'main600';
+  src: url('/fonts/GraphikLCG-Semibold.ttf');
+}
+@font-face {
 	font-family: 'main700';
   src: url('/fonts/GraphikLCG-Bold.ttf');
 }

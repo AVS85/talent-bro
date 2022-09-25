@@ -1,10 +1,11 @@
+import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 // import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
-import {Footer} from './footer/Footer'
+import {Feedback} from './feedback/Feedback'
 import {ContactForm} from './contact-form/ContactForm'
 import {Banner} from './banner/Banner'
+import {Footer} from './footer/Footer'
 
 export default function Home() {
   return (
@@ -19,9 +20,10 @@ export default function Home() {
 				main
       </main>
 
-			<Banner/>
-			<ContactForm/>
-			<Footer/>
+			<Feedback />
+			<Banner />
+			<ContactForm />
+			<Footer />
     </div>
   )
 }
