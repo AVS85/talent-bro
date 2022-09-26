@@ -1,0 +1,23 @@
+@import "../../styles/colors.module";
+
+.wrapper {
+	// border: 1px solid red;
+	padding: 64px 0 128px 0;
+	background: $bgAlt;
+	user-select: none;
+}
+.slidewrapper {
+	// border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	max-width: 100%;
+	width: 100%;
+	.img {
+		// border: 1px solid red;
+		object-fit: contain;
+		max-width: inherit;
+		height: 100px;
+	}
+}

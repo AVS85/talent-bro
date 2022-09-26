@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 // import Image from 'next/image'
 
+import {LogotypeCarousel} from './logotype-carousel/LogotypeCarousel'
 import {Feedback} from './feedback/Feedback'
 import {ContactForm} from './contact-form/ContactForm'
 import {Banner} from './banner/Banner'
@@ -20,6 +21,8 @@ export default function Home() {
 				main
       </main>
 
+
+			<LogotypeCarousel/>
 			<Feedback />
 			<Banner />
 			<ContactForm />

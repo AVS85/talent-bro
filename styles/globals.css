@@ -31,6 +31,28 @@
   src: url('/fonts/GraphikLCG-Bold.ttf');
 }
 
+/* .bull {
+	border: 1px solid red;
+} */
+.swiper-pagination-bullet-active-main {
+	/* border: 3px solid red; */
+	min-width: 20px;
+	min-height: 20px;
+	background: #9A33FE;
+}
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-prev-prev,
+.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet-active-next-next {
+	min-width: 20px;
+	min-height: 20px;
+	background: rgba(217, 217, 217, 0.4);
+	
+}
+ {
+
+}
+
 html,
 body {
   padding: 0;

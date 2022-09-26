@@ -1,0 +1,16 @@
+export const logotypes = [
+{ logo: 'alibaba.png', alt: 'алибаба' },
+{ logo: 'gemohelp.png', alt: 'гемохелп' },
+{ logo: 'megafon.png', alt: 'мегафон' },
+{ logo: 'menshealth.png', alt: 'менсхелс' },
+{ logo: 'mts.png', alt: 'мтс' },
+{ logo: 'pik.png', alt: 'пик' },
+{ logo: 'rostelecom.png', alt: 'ростелеком' },
+{ logo: 'samsung.png', alt: 'самсунг' },
+{ logo: 'sber.png', alt: 'сбер' },
+{ logo: 'skyeng.png', alt: 'скайэнг' },
+{ logo: 'wildberries.png', alt: 'вайлдбериз' },
+{ logo: 'yandex.png', alt: 'яндекс' },
+{ logo: 'zte.png', alt: 'зте' },
+{ logo: 'x5.png', alt: 'х5' },
+]

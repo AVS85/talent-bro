@@ -17,7 +17,7 @@ export function FeedbackClientCard({
 
 			<Box className={styles.personal}>
 				<div className={styles.avatart}>
-					{data.avatar}
+					<img src={`/assets/clients/${data.avatar}`} alt={data.name} />
 				</div>
 				<div>
 					<div className={styles.name}>{data.name}</div>
