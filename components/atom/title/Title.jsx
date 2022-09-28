@@ -6,7 +6,7 @@ export function Title({
 	title,
 	subtitle,
 	styleName = 'default',
-	isUnderline = false
+	isUnderline = false, //показать подчеркивание
 }){
 	return (
 		<section className={styles.wrapper}>

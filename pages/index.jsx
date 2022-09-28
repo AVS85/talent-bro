@@ -2,6 +2,8 @@ import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 // import Image from 'next/image'
 
+import {Advances} from './advances/Advances'
+import {Advances2} from './advances2/Advances2'
 import {ScheduleRates} from './schedule-rates/ScheduleRates'
 import {Userflow} from './user-flow/Userflow'
 import {LogotypeCarousel} from './logotype-carousel/LogotypeCarousel'
@@ -23,6 +25,8 @@ export default function Home() {
 				main
       </main>
 
+			<Advances />
+			<Advances2 />
 			<ScheduleRates />
 			<Userflow />
 			<LogotypeCarousel />

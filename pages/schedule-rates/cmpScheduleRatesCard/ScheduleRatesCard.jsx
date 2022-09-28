@@ -21,8 +21,9 @@ export function ScheduleRatesCard({
 				
 				<div className={styles.items}>
 					<ul className={styles.ul}>
-					{data.items.map( item => 
+					{data.items.map( (item, index) => 
 						<li 
+							key={index}
 							className={`${styles.li} ${item.icon ? styles.liOn : styles.liOff}`}
 							dangerouslySetInnerHTML={{__html: item.text}} 
 						/>
