@@ -1,0 +1,41 @@
+@import "../../styles/colors.module";
+
+.wrapper {
+	// padding: 128px 0 0 0;
+	margin: 128px 0 0 0;
+	border: 1px solid red;
+
+	.icons {
+		margin-bottom: 70px;
+	}
+	.title {
+		font-family: 'main700';
+		font-weight: 700;
+		font-size: 80px;
+		line-height: 80px;
+		letter-spacing: 0.03em;
+		margin-bottom: 54px;
+	}
+	.subtitle {
+		font-family: 'main500';
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 25px;
+		letter-spacing: 0.03em;
+		margin-bottom: 24px;
+	}
+	.text {
+		font-family: 'main400';
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: 0.03em;
+		margin-bottom: 90px;
+	}
+
+	.banner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
