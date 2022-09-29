@@ -6,13 +6,13 @@ import styles from './Advances2.module.scss'
 import { Box, Container, TextField } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 //swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Pagination } from "swiper";
 import 'swiper/css';
 import "swiper/css/pagination";
 //own
 import {Button} from '../../components/atom/button/Button'
-import {Input} from '../../components/atom/input/Input'
+// import {Input} from '../../components/atom/input/Input'
 import {Title} from '../../components/atom/title/Title'
 // import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
 
@@ -50,14 +50,17 @@ export function Advances2(){
 					>
 						<Title 
 						title="Однако хорошего резюме уже недостаточно" 
-						subtitle="Чтобы получать приглашения на интервью, важно адаптировать резюме под каждую вакансию и понимать, как работают алгоритмы работных сайтов"
+						subtitle="Чтобы получать приглашения на&nbsp;интервью,<br>важно адаптировать резюме под каждую вакансию и&nbsp;понимать, как работают алгоритмы работных сайтов"
 						/>
 						<ul>
 							<li>Алгоритмы джоббордов (hh, superjob, Lnkdn и др.) заточены под поиск ключевых слов, соответствующих  вакансии.</li>
 							<li>Чем больше совпадений, тем выше резюме в выдаче. Минимум совпадений - резюме не попадает в ТОП списка и остается не просмотренным. Отсюда низкая конверсия в просмотры и интервью.</li>
 							<li>Мы поможем решить эту задачу. И вас научим.</li>
 						</ul>
-						<Button title={'Заказать'} />
+
+						<div className={styles.buttonWrapper}>
+							<Button title={'Заказать'} />
+						</div>
 
 	        </Grid>
 

@@ -1,11 +1,26 @@
 .wrapper {
-	padding: 90px 0 120px 0;
+	// padding: 90px 0 120px 0;
+	padding-bottom: 105px;
+	@media (max-width: 768px) {
+		padding-bottom: 80px;
+	}
 	ul {
 		font-family: 'main300';
 		font-size: 20px;
 		line-height: 20px;
 		li {
 			padding-bottom: 20px;
+		}
+	}
+	.buttonWrapper {
+		display: flex;
+		// margin-bottom: 36px;
+		margin-top: 40px;
+		@media (max-width: 768px) {
+			// background-size: 90px;
+			margin-top: 80px;
+
+			justify-content: center;
 		}
 	}
 }
