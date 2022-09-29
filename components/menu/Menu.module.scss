@@ -1,0 +1,61 @@
+@import "../../styles/colors.module";
+
+.wrapper {
+	position: relative;
+	// border: 1px solid $textGrey;
+	padding: 45px 0;
+	z-index: 1;
+	.container {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.popDownMenuWrapper {
+	// border: 1px solid $textGrey;
+	// width: calc(100% + 10px);
+	position: relative;
+	// &:hover {
+	// }
+	.title {
+		// border: 1px solid $textGrey;
+
+		color: $textGrey;
+		font-family: 'main500';
+		font-size: 20px;
+		line-height: 20px;
+		padding: 5px 15px;
+		cursor: pointer;
+		&:hover {
+			background-color: $bgAlt;
+			color: $textAcc;
+			// font-family: 'main400';
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+
+	.itemsBox {
+		// border: 1px solid $textGrey;
+		background-color: $bgAlt;
+
+		position: absolute;
+		left: 0px;
+		top: 100%;
+		width: 100%;
+		.subitem {
+			color: $textGrey;
+			font-family: 'main400';
+			font-size: 15px;
+			line-height: 15px;
+			padding: 5px 0 5px 15px;
+			// margin: 1px 0;
+			cursor: pointer;
+			&:hover {
+				color: $textAlt;
+				background-color: $elemAcc;
+	
+			}
+		}
+	}
+}

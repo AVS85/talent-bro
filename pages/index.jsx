@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 // import Image from 'next/image'
 
+import {Menu} from '../components/menu/Menu'
 import {Main} from './main/Main'
 import {Advances} from './advances/Advances'
 import {Advances2} from './advances2/Advances2'
@@ -24,6 +25,7 @@ export default function Home() {
 
 
 
+			<Menu />
 			<Main />
 			<Advances />
 			<Advances2 />
