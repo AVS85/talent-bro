@@ -41,65 +41,64 @@ export function LogotypeCarousel(){
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
-				<Title
-				title="Это работает!"
-				subtitle="После переработки резюме наши пользователи работают в крупнейших российских и зарубежных компаниях"
-				// isUnderline={true}
-				/>
-
-				<Box sx={{margin: '120px 0 0 0'}}>
-					<Swiper
-			      spaceBetween={40}
-						// slidesPerView={"auto"}
-			      slidesPerView={1}
-			      // onSlideChange={() => console.log('slide change')}
-			      // onSwiper={(swiper) => console.log(swiper)}
-						// observeSlideChildren={true}
-						// observer={true}
-						// observerUpdate={() => console.log('slide change')}
-						// pagination={pagination}
-						// pagination={{
-						// 	dynamicBullets: true,
-						// }}
-						// modules={[Pagination]}
-						breakpoints={{
-							// when window width is >= 640px
-							320: {
-								slidesPerView: 2,
-								spaceBetween: 20
-							},
-							567: {
-								slidesPerView: 3,
-								spaceBetween: 30
-							},
-							768: {
-								slidesPerView: 4,
-								spaceBetween: 40
-							},
-							998: {
-								slidesPerView: 5,
-								spaceBetween: 40
-							},
-							// 998: {
-							// 	// slidesPerView: 3,
-							// 	spaceBetween: 40
-							// }
-						}}
-			    >
-						{
-							lt.map((item,index) => 
-							<SwiperSlide style={{height: 'auto'}} key={index}>
-								<dix className={styles.slidewrapper}>
-									<img 
-										className={styles.img}
-										src={`/assets/logotypes/${item.logo}`} 
-										alt={`${item.alt}`}
-									/>
-								</dix>
-							</SwiperSlide>)
-						}
-			    </Swiper>
+				<Box className={styles.titleBox}>
+					<Title
+					title="Это работает!"
+					subtitle="После переработки резюме наши пользователи работают<br>в крупнейших российских и зарубежных компаниях"
+					/>
 				</Box>
+
+				<Swiper
+		      spaceBetween={40}
+					// slidesPerView={"auto"}
+		      slidesPerView={1}
+		      // onSlideChange={() => console.log('slide change')}
+		      // onSwiper={(swiper) => console.log(swiper)}
+					// observeSlideChildren={true}
+					// observer={true}
+					// observerUpdate={() => console.log('slide change')}
+					// pagination={pagination}
+					// pagination={{
+					// 	dynamicBullets: true,
+					// }}
+					// modules={[Pagination]}
+					breakpoints={{
+						// when window width is >= 640px
+						320: {
+							slidesPerView: 2,
+							spaceBetween: 20
+						},
+						567: {
+							slidesPerView: 3,
+							spaceBetween: 30
+						},
+						768: {
+							slidesPerView: 4,
+							spaceBetween: 40
+						},
+						998: {
+							slidesPerView: 5,
+							spaceBetween: 40
+						},
+						// 998: {
+						// 	// slidesPerView: 3,
+						// 	spaceBetween: 40
+						// }
+					}}
+		    >
+					{
+						lt.map((item,index) => 
+						<SwiperSlide style={{height: 'auto'}} key={index}>
+							<dix className={styles.slidewrapper}>
+								<img 
+									className={styles.img}
+									src={`/assets/logotypes/${item.logo}`} 
+									alt={`${item.alt}`}
+								/>
+							</dix>
+						</SwiperSlide>)
+					}
+		    </Swiper>
 
 			</Container>
 		</section>

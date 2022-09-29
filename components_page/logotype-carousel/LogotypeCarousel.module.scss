@@ -2,9 +2,19 @@
 
 .wrapper {
 	// border: 1px solid red;
-	padding: 64px 0 128px 0;
+	padding: 60px 0 120px 0;
 	background: $bgAlt;
 	user-select: none;
+	@media (max-width: 768px) {
+		padding: 75px 0 75px 0;
+
+	}
+	.titleBox {
+		margin-bottom: 120px;
+		@media (max-width: 768px) {
+			margin-bottom: 75px;
+		}
+	}
 }
 .slidewrapper {
 	// border: 1px solid red;

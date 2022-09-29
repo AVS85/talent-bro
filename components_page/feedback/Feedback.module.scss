@@ -1,3 +1,12 @@
 .wrapper {
-	padding: 90px 0px 120px;
+	padding: 105px 0px 120px;
+	@media (max-width: 768px) {
+		padding: 60px 0px 75px;
+	}
+	.titleBox {
+		margin-bottom: 90px;
+		@media (max-width: 768px) {
+			margin-bottom: 60px;
+		}
+	}
 }

@@ -27,10 +27,10 @@ export default function Home() {
 			<Menu />
 			{/* <Main />
 			<Advances />
-			<Advances2 /> */}
+			<Advances2 />
 			<ScheduleRates />
 			<Userflow />
-			<LogotypeCarousel />
+			<LogotypeCarousel /> */}
 			<Feedback />
 			<Banner />
 			<ContactForm />

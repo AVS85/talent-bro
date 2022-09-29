@@ -26,46 +26,40 @@ export function Userflow(){
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
-				<Title
-				title="Как все устроено"
-				// subtitle="После переработки резюме наши пользователи работают в крупнейших российских и зарубежных компаниях"
-				// isUnderline={true}
-				/>
-
-				<Box sx={{
-					margin: '90px 0'
-				}}>
-					<Swiper
-			      spaceBetween={0}
-			      slidesPerView={2}
-			      // onSlideChange={() => console.log('slide change')}
-			      // onSwiper={(swiper) => console.log(swiper)}
-						// observeSlideChildren={true}
-						// observer={true}
-						// observerUpdate={() => console.log('slide change')}
-						// pagination={pagination}
-						// pagination={{
-						// 	dynamicBullets: true,
-						// }}
-						// modules={[Pagination]}
-						breakpoints={{
-							// when window width is >= 640px
-							567: {
-								slidesPerView: 3,
-							},
-							768: {
-								slidesPerView: 4,
-							},
-							998: {
-								slidesPerView: 5,
-							}
-						}}
-			    >
-						{
-							uf.map((item,index) => <SwiperSlide style={{height: 'auto'}} key={index}><UserflowStep data={item} /></SwiperSlide>)
-						}
-			    </Swiper>
+				<Box sx={{ marginBottom: '90px' }}>
+					<Title title="Как все устроено" />
 				</Box>
+
+				<Swiper
+		      spaceBetween={0}
+		      slidesPerView={2}
+		      // onSlideChange={() => console.log('slide change')}
+		      // onSwiper={(swiper) => console.log(swiper)}
+					// observeSlideChildren={true}
+					// observer={true}
+					// observerUpdate={() => console.log('slide change')}
+					// pagination={pagination}
+					// pagination={{
+					// 	dynamicBullets: true,
+					// }}
+					// modules={[Pagination]}
+					breakpoints={{
+						// when window width is >= 640px
+						567: {
+							slidesPerView: 3,
+						},
+						768: {
+							slidesPerView: 4,
+						},
+						998: {
+							slidesPerView: 5,
+						}
+					}}
+		    >
+					{
+						uf.map((item,index) => <SwiperSlide style={{height: 'auto'}} key={index}><UserflowStep data={item} /></SwiperSlide>)
+					}
+		    </Swiper>
 			</Container>
 		</section>
 	)

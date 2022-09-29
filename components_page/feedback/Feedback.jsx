@@ -40,52 +40,42 @@ export function Feedback(){
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
-				<Title
-				title="Клиенты говорят нам, что плюсом к резюме они получают свежий взгляд на свой опыт и +100 баллов к самооценке"
-				// subtitle="После переработки резюме наши пользователи работают в крупнейших российских и зарубежных компаниях"
-				// isUnderline={true}
-				/>
-
-				<Box sx={{
-					margin: '90px 0'
-				}}>
-					<Swiper
-			      spaceBetween={40}
-			      slidesPerView={1}
-			      // onSlideChange={() => console.log('slide change')}
-			      // onSwiper={(swiper) => console.log(swiper)}
-						// observeSlideChildren={true}
-						// observer={true}
-						// observerUpdate={() => console.log('slide change')}
-						// pagination={pagination}
-						// pagination={{
-						// 	dynamicBullets: true,
-						// }}
-						// modules={[Pagination]}
-						breakpoints={{
-							// when window width is >= 640px
-							768: {
-								slidesPerView: 2,
-								spaceBetween: 40
-							},
-							998: {
-								slidesPerView: 3,
-								spaceBetween: 40
-							}
-						}}
-			    >
-						{
-							fb.map((item,index) => <SwiperSlide style={{height: 'auto'}} key={index}><FeedbackClientCard data={item} /></SwiperSlide>)
-						}
-			    </Swiper>
+				<Box className={styles.titleBox}>
+					<Title
+					title="Клиенты говорят нам, что плюсом к резюме они получают свежий взгляд на свой опыт и +100 баллов к самооценке"
+					/>
 				</Box>
 
-				{
-							fb.map(item => {
-								<div>sdsds</div>
-							})
-							// swiper.update()
-				}
+				<Swiper
+		      spaceBetween={40}
+		      slidesPerView={1}
+		      // onSlideChange={() => console.log('slide change')}
+		      // onSwiper={(swiper) => console.log(swiper)}
+					// observeSlideChildren={true}
+					// observer={true}
+					// observerUpdate={() => console.log('slide change')}
+					// pagination={pagination}
+					// pagination={{
+					// 	dynamicBullets: true,
+					// }}
+					// modules={[Pagination]}
+					breakpoints={{
+						// when window width is >= 640px
+						768: {
+							slidesPerView: 2,
+							spaceBetween: 40
+						},
+						998: {
+							slidesPerView: 3,
+							spaceBetween: 40
+						}
+					}}
+		    >
+					{
+						fb.map((item,index) => <SwiperSlide style={{height: 'auto'}} key={index}><FeedbackClientCard data={item} /></SwiperSlide>)
+					}
+		    </Swiper>
+
 			</Container>
 		</section>
 	)
