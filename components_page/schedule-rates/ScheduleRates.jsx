@@ -27,7 +27,7 @@ export function ScheduleRates(){
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
 				<Title
-				title="TalentBro поможет создать профессиональное резюме и выиграть у бездушных алгоритмов"
+				title="TalentBro поможет создать профессиональное<br>резюме и выиграть у&nbsp;бездушных алгоритмов"
 				// subtitle="После переработки резюме наши пользователи работают в крупнейших российских и зарубежных компаниях"
 				// isUnderline={true}
 				/>
@@ -36,7 +36,7 @@ export function ScheduleRates(){
 					margin: '64px 0'
 				}}>
 					<Swiper
-			      spaceBetween={30}
+			      spaceBetween={20}
 			      slidesPerView={1}
 			      // onSlideChange={() => console.log('slide change')}
 			      // onSwiper={(swiper) => console.log(swiper)}

@@ -30,7 +30,7 @@ export const scheduleRates = [
 		cost: '11 900 р.',
 	},
 	{
-		header: 'Сделайте все за меня срочно',
+		header: 'Сделайте все<br>за меня срочно',
 		headerItems: 'Для тех, у кого горит',
 		styleActive: null,
 		items: [

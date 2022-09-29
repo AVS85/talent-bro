@@ -2,7 +2,7 @@
 
 .wrapper {
 	position: relative;
-	border: 2px solid transparent;
+	border: 0;
 	border-radius: 20px;
 	background-color: $bgLht;
 	display: flex;
@@ -22,19 +22,19 @@
 		// border-radius: 20px 20px 0 0;
 		color: #fff;
 		font-family: 'main500';
-		font-size: 21px;
+		font-size: 20px;
 		line-height: 21px;
 		text-align: center;
 
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 17px 24px;
+		padding: 17px;
 		min-height: 75px;
 		width: 100%;
 	}
 	.contentWrapper{
-		padding: 30px 22px;
+		padding: 30px 20px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -91,6 +91,9 @@
 			font-size: 24px;
 			line-height: 24px;
 			text-align: center;
+			&.costActive {
+				color: $textAcc
+			}
 		}
 	}
 }

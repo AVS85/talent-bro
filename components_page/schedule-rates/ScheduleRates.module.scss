@@ -1,6 +1,10 @@
 @import "../../styles/colors.module";
 
 .wrapper {
-	padding: 90px 0px 90px;
+	padding: 90px 0px 60px;
 	background-color: $bgAlt;
+	@media (max-width: 768px) {
+		padding: 60px 0px 60px;
+
+	}
 }

@@ -25,9 +25,9 @@ export default function Home() {
 
 
 			<Menu />
-			<Main />
+			{/* <Main />
 			<Advances />
-			<Advances2 />
+			<Advances2 /> */}
 			<ScheduleRates />
 			<Userflow />
 			<LogotypeCarousel />
