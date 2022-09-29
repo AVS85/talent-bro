@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 //nextjs
 import styles from './Advances.module.scss'
 // import styles2 from './Feedback.scss'
-import Image from 'next/image'
 //mui
 import { Box, Container, TextField } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -68,7 +67,7 @@ export function Advances(){
 
 					{/* RIGHT */}
 					<Grid item xs={12} md={6} className={styles.banner}>
-						<Image src={bgImage} layout="intrinsic" />
+						<img className={styles.bg} src={bgImage.src} alt="" />
 	        </Grid>
 					{/* RIGHT end */}
 

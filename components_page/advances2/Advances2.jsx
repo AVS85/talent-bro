@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 //nextjs
 import styles from './Advances2.module.scss'
 // import styles2 from './Feedback.scss'
-import Image from 'next/image'
 //mui
 import { Box, Container, TextField } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -64,7 +63,6 @@ export function Advances2(){
 
         </Grid>
 
-				{/* <Image src={telegram} layout="intrinsic" /> */}
 			</Container>
 		</section>
 	)

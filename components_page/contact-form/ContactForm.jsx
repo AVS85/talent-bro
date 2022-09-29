@@ -1,6 +1,5 @@
 
 import styles from './ContactForm.module.scss'
-import Image from 'next/image'
 //MUI
 import { Box, Container, TextField } from '@mui/material';
 // import Box from '@mui/material/Box';
@@ -36,7 +35,7 @@ export function ContactForm(){
 							<div className={styles.title}>Доверьте ваше<br/>резюме</div>
 						</div>
 						<div className={styles.logo}>
-							<Image src={talentbro} layout="responsive"/>
+							<img src={talentbro.src} alt="" />
 						</div>
 	        </Grid>
 

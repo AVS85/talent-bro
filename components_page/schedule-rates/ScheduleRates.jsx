@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 //nextjs
-import styles from './Userflow.module.scss'
+import styles from './ScheduleRates.module.scss'
 // import styles2 from './Feedback.scss'
-import Image from 'next/image'
 //mui
 import { Box, Container, TextField } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -15,30 +14,30 @@ import "swiper/css/pagination";
 import {Button} from '../../components/atom/button/Button'
 import {Input} from '../../components/atom/input/Input'
 import {Title} from '../../components/atom/title/Title'
-import {UserflowStep} from './cmpUserflowStep/UserflowStep'
+import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
 
 //assets
 // import talentbro from './assets/talentbro.svg'
-import {userflow} from './assets/userflow'
+import {scheduleRates} from './assets/scheduleRates'
 
-export function Userflow(){
-	const [uf, setUserflow] = useState(userflow || ['d'])
+export function ScheduleRates(){
+	const [sr] = useState(scheduleRates || [])
 
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
 				<Title
-				title="Как все устроено"
+				title="TalentBro поможет создать профессиональное резюме и выиграть у бездушных алгоритмов"
 				// subtitle="После переработки резюме наши пользователи работают в крупнейших российских и зарубежных компаниях"
 				// isUnderline={true}
 				/>
 
 				<Box sx={{
-					margin: '90px 0'
+					margin: '64px 0'
 				}}>
 					<Swiper
-			      spaceBetween={0}
-			      slidesPerView={2}
+			      spaceBetween={30}
+			      slidesPerView={1}
 			      // onSlideChange={() => console.log('slide change')}
 			      // onSwiper={(swiper) => console.log(swiper)}
 						// observeSlideChildren={true}
@@ -52,18 +51,18 @@ export function Userflow(){
 						breakpoints={{
 							// when window width is >= 640px
 							567: {
-								slidesPerView: 3,
+								slidesPerView: 2,
 							},
 							768: {
-								slidesPerView: 4,
+								slidesPerView: 2,
 							},
 							998: {
-								slidesPerView: 5,
+								slidesPerView: 4,
 							}
 						}}
 			    >
 						{
-							uf.map((item,index) => <SwiperSlide style={{height: 'auto'}} key={index}><UserflowStep data={item} /></SwiperSlide>)
+							sr.map((item,index) => <SwiperSlide style={{height: 'auto'}} key={index}><ScheduleRatesCard data={item} /></SwiperSlide>)
 						}
 			    </Swiper>
 				</Box>

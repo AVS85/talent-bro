@@ -2,19 +2,18 @@ import { useState, useEffect } from 'react';
 //nextjs
 import styles from './Main.module.scss'
 // import styles2 from './Feedback.scss'
-import Image from 'next/image'
 //mui
 import { Box, Container, TextField } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 //swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Pagination } from "swiper";
 import 'swiper/css';
 import "swiper/css/pagination";
 //own
 import {Button} from '../../components/atom/button/Button'
-import {Input} from '../../components/atom/input/Input'
-import {Title} from '../../components/atom/title/Title'
+// import {Input} from '../../components/atom/input/Input'
+// import {Title} from '../../components/atom/title/Title'
 // import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
 
 //assets
@@ -33,8 +32,8 @@ export function Main(){
 					{/* LEFT */}
 	        <Grid item xs={12} md={6} >
 						<div className={styles.icons}>
-							<Image className={styles.icon} src={bird} layout="intrinsic" />
-							<Image className={styles.icon} src={hand} layout="intrinsic" />
+							<img className={styles.icon} src={bird.src} alt="bird" />
+							<img className={styles.icon} src={hand.src} alt="hand" />
 						</div>
 						<div className={styles.title}>TalentBro</div>
 						<div className={styles.subtitle}>Сервис профессиональных резюме</div>
@@ -49,7 +48,7 @@ export function Main(){
 
 					{/* RIGHT */}
 					<Grid item xs={12} md={6} className={styles.banner}>
-						<Image src={bgImage} layout="intrinsic" />
+						<img className={styles.bg} src={bgImage.src} alt="bgImage" />
 	        </Grid>
 					{/* RIGHT end */}
 

@@ -1,6 +1,5 @@
 
 import styles from './Footer.module.scss'
-import Image from 'next/image'
 //MUI
 import { Container } from '@mui/material';
 // import Grid from '@mui/material/Grid'; // Grid version 1
@@ -30,7 +29,9 @@ export function Footer(){
 						justifyContent: 'space-between'
 					}} 
 					>
-	          <div><Image src={logo} layout="intrinsic" /></div>
+	          <div>
+							<img src={logo.src} alt="logo" />
+						</div>
 						<div>© TalentBro 2022</div>
 	        </Grid>
 
@@ -57,7 +58,7 @@ export function Footer(){
 							<li>hello.talentbro@gmail.com</li>
 						</ul>
 						<div className={styles.social}>
-							<Image src={telegram} layout="intrinsic" />
+							<img src={telegram.src} alt="telegram" />
 						</div>
 	        </Grid>
 

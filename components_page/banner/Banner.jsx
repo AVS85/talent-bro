@@ -1,6 +1,5 @@
 
 import styles from './Banner.module.scss'
-// import Image from 'next/image'
 //MUI
 import { Container } from '@mui/material';
 // import Grid from '@mui/material/Grid'; // Grid version 1
