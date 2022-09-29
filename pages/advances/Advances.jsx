@@ -36,12 +36,14 @@ export function Advances(){
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
-				<Title 
-				title="Чем хорошее резюме отличаетсяот собранного за 30 минут «на коленке»" 
-				isUnderline={true}
-				/>
+				<div className={styles.containerTitle}>
+					<Title 
+					title="Чем хорошее резюме отличается<br>от собранного за&nbsp;30&nbsp;минут «на&nbsp;коленке»" 
+					isUnderline={true}
+					/>
+				</div>
 
-				<Grid container xs={12} sx={{padding: '64px 0'}} >
+				<Grid container xs={12}>
 
 					{/* LEFT */}
 	        <Grid item xs={12} md={6} >

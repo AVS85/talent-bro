@@ -6,7 +6,10 @@
 		font-family: 'main600';
 		font-size: 40px;
 		line-height: 40px;
-
+		@media (max-width: 768px) {
+			font-size: 30px;
+			line-height: 30px;
+		}
 		&.underline::before {
 			content: '';
 			position: absolute;

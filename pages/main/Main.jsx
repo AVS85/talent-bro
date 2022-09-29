@@ -38,8 +38,10 @@ export function Main(){
 						</div>
 						<div className={styles.title}>TalentBro</div>
 						<div className={styles.subtitle}>Сервис профессиональных резюме</div>
-						<div className={styles.text}>Сделаем ревью вашего резюме, расскажем, что улучшить или напишем его полностью за вас</div>
-						<Button title="Хочу резюме" />
+						<div className={styles.text}><span>Сделаем ревью вашего резюме,<br/>расскажем,&nbsp;что улучшить или напишем<br/>его полностью за вас</span></div>
+						<div className={styles.buttonWrapper}>
+							<Button title="Хочу резюме" />
+						</div>
 	        </Grid>
 					{/* LEFT end */}
 

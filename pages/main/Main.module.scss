@@ -1,12 +1,20 @@
 @import "../../styles/colors.module";
 
 .wrapper {
-	// padding: 128px 0 0 0;
-	margin: 0px 0 0 0;
 	// border: 1px solid red;
+	margin: 120px 0 105px 0;
+	@media (max-width: 768px) {
+		margin: 90px 0 75px 0;
+	}
 
 	.icons {
 		margin-bottom: 70px;
+		@media (max-width: 768px) {
+			margin-bottom: 48px;
+		}
+		.icon {
+			margin-right: 12px !important;
+		}
 	}
 	.title {
 		font-family: 'main700';
@@ -15,6 +23,11 @@
 		line-height: 80px;
 		letter-spacing: 0.03em;
 		margin-bottom: 54px;
+		@media (max-width: 768px) {
+			font-size: 55px;
+			line-height: 55px;
+			margin-bottom: 24px;
+		}
 	}
 	.subtitle {
 		font-family: 'main500';
@@ -31,11 +44,23 @@
 		line-height: 20px;
 		letter-spacing: 0.03em;
 		margin-bottom: 90px;
+		@media (max-width: 768px) {
+			margin-bottom: 60px;
+		}
 	}
 
 	.banner {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.buttonWrapper {
+		display: flex;
+		margin-bottom: 36px;
+		@media (max-width: 768px) {
+			// background-size: 90px;
+			justify-content: center;
+		}
 	}
 }

@@ -10,8 +10,16 @@ export function Title({
 }){
 	return (
 		<section className={styles.wrapper}>
-			<div className={`${styles.title} ${isUnderline ? styles.underline : ''}` }>{title}</div>
-			{subtitle && <div className={styles.subtitle}>{subtitle}</div>}
+			<div 
+				className={`${styles.title} ${isUnderline ? styles.underline : ''}` }
+				dangerouslySetInnerHTML={{__html: title}} 
+			/>
+			{subtitle && 
+			<div 
+				className={styles.subtitle}
+				dangerouslySetInnerHTML={{__html: subtitle}} 
+			/>
+			}
 		</section>
 	)
 } 
