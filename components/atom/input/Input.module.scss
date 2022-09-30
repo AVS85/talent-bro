@@ -1,6 +1,7 @@
 @import "../../../styles/colors.module";
 
 .wrapper {
+	border-bottom: 1px solid #000000;
 	.textField {
 		width: 100%;
 		// background: $elemAcc;
@@ -13,11 +14,10 @@
 	}
 	.input {
 		border: 0;
-		border-bottom: 1px solid #000000;
 		font-family: 'main500';
 		font-size: 20px;
 		line-height: 20px;
-		padding: 18px 0;
+		padding: 18px;
 		outline: none;
 		width: 100%;
 		:active, :hover, :focus {

@@ -3,11 +3,17 @@ import styles from './Button.module.scss'
 export function Button({
 	title,
 	onClick = () => {},
-	styleName = 'default'
+	styleName = 'default',
+	type,
+	isDisabled = false,
 }){
 	return (
 		<section className={styles.wrapper}>
-			<button className={styles[styleName]} onClick={onClick}>{title}</button>
+			<button
+			disabled={isDisabled}
+			className={`${styles[styleName]}`}
+			type={type}
+			onClick={onClick}>{title}</button>
 		</section>
 	)
 } 

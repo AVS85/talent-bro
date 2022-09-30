@@ -10,6 +10,7 @@
 	line-height: 26px;
 	min-width: 250px;
 	padding: 10px 45px;
+	cursor: pointer;
 	&.alt {
 		background: transparent;
 		border: 2px solid $elemAcc;
@@ -17,5 +18,11 @@
 		font-size: 15px;
 		line-height: 15px;
 		font-family: 'main500';
+	}
+	&:disabled {
+		background: $bgAcc !important;
+		border: 2px solid $bgAcc;
+		filter: grayscale(1);
+		cursor: default;
 	}
 }

@@ -83,14 +83,14 @@ export function Menu(){
 				<Box sx={{ml: '5px'}}>
 					<CmpPopDownMenu title="Резюме" link="advances"
 					items={[
-						{title: 'Что это', link: ''},
-						{title: 'Примеры', link: ''},
-						{title: 'Как лучше', link: ''},
+						{title: 'Сделать самому', link: 'https://taalentbro.notion.site/7c5e414fc879482986af1dabd14359ae'},
+						{title: 'Тарифы', link: 'schedulerates'},
+						{title: 'Заказать', link: 'contactform'},
 					]} 
 					/>
 				</Box>
 				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Тарифы" link="schedulerates"/></Box>
-				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Блог" link="schedulerates"/></Box>
+				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Блог" link="https://taalentbro.notion.site/"/></Box>
 				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Напишите нам" link="contactform"/></Box>
 
 
