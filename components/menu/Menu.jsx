@@ -24,12 +24,13 @@ import { Link, animateScroll as scroll } from "react-scroll";
 // import hand from './assets/hand.png'
 // import bgImage from './assets/bg.jpg'
 function CmpPopDownMenu({
-	title = 'j',
+	title,
 	link,
+	hash,
 	items = null,
 }){
 
-	const [isFocusTop, setIsOpenTop] = useState(true)
+	const [isFocusTop, setIsOpenTop] = useState(false)
 
 	function onMouseOver(bool){
 		setIsOpenTop(bool)
@@ -42,29 +43,56 @@ function CmpPopDownMenu({
 			onMouseOver={() => onMouseOver(true)}
 			onMouseOut={() => onMouseOver(false)}
 			>
-				<Link
-		    activeClass="active"
-		    to={link}
-		    spy={true}
-		    smooth={true}
-		    offset={-70}
-		    duration={500}
-				>{title}
-				</Link>
+				{
+				link && 
+					<a
+			    href={link}
+					target={"_blank"}
+					>
+						{title}
+					</a>
+				}
+
+				{
+				hash && 
+					<Link
+			    activeClass="active"
+			    to={hash}
+			    spy={true}
+			    smooth={true}
+			    offset={-70}
+			    duration={500}
+					>
+						{title}
+					</Link>
+				}
+				
 				<div className={items && styles.itemsBox}>
 					{ isFocusTop &&
 						items?.map((item, index) => {
 							return ( 
 								<div className={styles.subitem} key={index}>
-									<Link
-							    activeClass="active"
-							    to={item.link}
-							    spy={true}
-							    smooth={true}
-							    offset={-70}
-							    duration={500}
-									>{item.title}
-									</Link>
+									{item?.link && 
+										<a
+								    href={item.link}
+										target={"_blank"}
+										>
+											{item.title}
+										</a>
+									}
+
+									{item?.hash && 
+										<Link
+								    activeClass="active"
+								    to={item.hash}
+								    spy={true}
+								    smooth={true}
+								    offset={-70}
+								    duration={500}
+										>
+											{item.title}
+										</Link>
+									}
 								</div>
 							)
 						})
@@ -81,27 +109,23 @@ export function Menu(){
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
 				<Box sx={{ml: '5px'}}>
-					<CmpPopDownMenu title="Резюме" link="advances"
+					<CmpPopDownMenu title="Резюме" hash="advances"
 					items={[
 						{title: 'Сделать самому', link: 'https://taalentbro.notion.site/7c5e414fc879482986af1dabd14359ae'},
-						{title: 'Тарифы', link: 'schedulerates'},
-						{title: 'Заказать', link: 'contactform'},
+						{title: 'Тарифы', hash: 'schedulerates'},
+						{title: 'Заказать', hash: 'contactform'},
 					]} 
 					/>
 				</Box>
-				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Тарифы" link="schedulerates"/></Box>
-				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Блог" link="https://taalentbro.notion.site/"/></Box>
-				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Напишите нам" link="contactform"/></Box>
-
-
-{/* 
-				<Grid container xs={12}>
-
-	        <Grid item xs={12} md={6} >
-						 <CmpItemTop title="dddd" />
-	        </Grid>
-
-        </Grid> */}
+				<Box sx={{ml: '5px'}}>
+					<CmpPopDownMenu title="Тарифы" hash="schedulerates"/>
+				</Box>
+				<Box sx={{ml: '5px'}}>
+					<CmpPopDownMenu title="Блог" link="https://taalentbro.notion.site/"/>
+				</Box>
+				<Box sx={{ml: '5px'}}>
+					<CmpPopDownMenu title="Напишите нам" hash="contactform"/>
+				</Box>
 			</Container>
 		</section>
 	)
