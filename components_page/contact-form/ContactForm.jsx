@@ -14,7 +14,7 @@ import talentbro from './assets/talentbro.svg'
 
 export function ContactForm(){
 	return (
-		<section className={styles.wrapper}>
+		<section id="contactform" className={styles.wrapper}>
 			<Container className={styles.container}>
 			<Grid container 
 				spacing={3} 

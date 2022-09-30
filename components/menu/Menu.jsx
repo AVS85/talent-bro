@@ -4,16 +4,18 @@ import styles from './Menu.module.scss'
 // import styles2 from './Feedback.scss'
 //mui
 import { Box, Container, TextField } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+// import Grid from '@mui/material/Unstable_Grid2';
 //swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper";
-import 'swiper/css';
-import "swiper/css/pagination";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Pagination } from "swiper";
+// import 'swiper/css';
+// import "swiper/css/pagination";
+//scroll
+import { Link, animateScroll as scroll } from "react-scroll";
 //own
-import {Button} from '../../components/atom/button/Button'
-import {Input} from '../../components/atom/input/Input'
-import {Title} from '../../components/atom/title/Title'
+// import {Button} from '../../components/atom/button/Button'
+// import {Input} from '../../components/atom/input/Input'
+// import {Title} from '../../components/atom/title/Title'
 // import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
 
 //assets
@@ -23,6 +25,7 @@ import {Title} from '../../components/atom/title/Title'
 // import bgImage from './assets/bg.jpg'
 function CmpPopDownMenu({
 	title = 'j',
+	link,
 	items = null,
 }){
 
@@ -39,11 +42,31 @@ function CmpPopDownMenu({
 			onMouseOver={() => onMouseOver(true)}
 			onMouseOut={() => onMouseOver(false)}
 			>
-				{title}
+				<Link
+		    activeClass="active"
+		    to={link}
+		    spy={true}
+		    smooth={true}
+		    offset={-70}
+		    duration={500}
+				>{title}
+				</Link>
 				<div className={items && styles.itemsBox}>
 					{ isFocusTop &&
 						items?.map((item, index) => {
-							return <div className={styles.subitem} key={index}>{item.name}</div>
+							return ( 
+								<div className={styles.subitem} key={index}>
+									<Link
+							    activeClass="active"
+							    to={item.link}
+							    spy={true}
+							    smooth={true}
+							    offset={-70}
+							    duration={500}
+									>{item.title}
+									</Link>
+								</div>
+							)
 						})
 					}
 				</div>
@@ -57,18 +80,18 @@ export function Menu(){
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
-
-				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Резюме" 
-							items={[
-								{name: 'Что это', link: ''},
-								{name: 'Примеры', link: ''},
-								{name: 'Как лучше', link: ''},
-							]} 
-							/>
+				<Box sx={{ml: '5px'}}>
+					<CmpPopDownMenu title="Резюме" link="advances"
+					items={[
+						{title: 'Что это', link: ''},
+						{title: 'Примеры', link: ''},
+						{title: 'Как лучше', link: ''},
+					]} 
+					/>
 				</Box>
-				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Тарифы" /></Box>
-				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Блог" /></Box>
-				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Напишите нам" /></Box>
+				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Тарифы" link="schedulerates"/></Box>
+				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Блог" link="schedulerates"/></Box>
+				<Box sx={{ml: '5px'}}><CmpPopDownMenu title="Напишите нам" link="contactform"/></Box>
 
 
 {/* 

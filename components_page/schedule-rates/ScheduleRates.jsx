@@ -24,7 +24,7 @@ export function ScheduleRates(){
 	const [sr] = useState(scheduleRates || [])
 
 	return (
-		<section className={styles.wrapper}>
+		<section  id="schedulerates" className={styles.wrapper}>
 			<Container className={styles.container}>
 				<Title
 				title="TalentBro поможет создать профессиональное<br>резюме и выиграть у&nbsp;бездушных алгоритмов"

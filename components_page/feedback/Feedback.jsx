@@ -38,7 +38,7 @@ export function Feedback(){
   };
 
 	return (
-		<section className={styles.wrapper}>
+		<section id="feedback" className={styles.wrapper}>
 			<Container className={styles.container}>
 				<Box className={styles.titleBox}>
 					<Title

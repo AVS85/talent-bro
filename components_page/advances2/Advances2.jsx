@@ -15,7 +15,8 @@ import {Button} from '../../components/atom/button/Button'
 // import {Input} from '../../components/atom/input/Input'
 import {Title} from '../../components/atom/title/Title'
 // import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
-
+//scroll
+import { Link, animateScroll as scroll } from "react-scroll";
 //assets
 import bgImage from './assets/bg.png'
 
@@ -59,7 +60,16 @@ export function Advances2(){
 						</ul>
 
 						<div className={styles.buttonWrapper}>
-							<Button title={'Заказать'} />
+							<Link
+						    activeClass="active"
+						    to={'contactform'}
+						    spy={true}
+						    smooth={true}
+						    offset={-70}
+						    duration={500}
+								>
+								<Button title={'Заказать'} />
+							</Link>
 						</div>
 
 	        </Grid>

@@ -15,7 +15,8 @@ import {Button} from '../../components/atom/button/Button'
 // import {Input} from '../../components/atom/input/Input'
 // import {Title} from '../../components/atom/title/Title'
 // import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
-
+//scroll
+import { Link, animateScroll as scroll } from "react-scroll";
 //assets
 import bgImage from './assets/bg.jpg'
 import bird from './assets/bird.png'
@@ -39,7 +40,17 @@ export function Main(){
 						<div className={styles.subtitle}>Сервис профессиональных резюме</div>
 						<div className={styles.text}><span>Сделаем ревью вашего резюме,<br/>расскажем,&nbsp;что улучшить или напишем<br/>его полностью за вас</span></div>
 						<div className={styles.buttonWrapper}>
-							<Button title="Хочу резюме" />
+							<Link
+					    activeClass="active"
+					    to={'contactform'}
+					    spy={true}
+					    smooth={true}
+					    offset={-70}
+					    duration={500}
+							>
+								<Button title="Хочу резюме" />
+							</Link>
+							
 						</div>
 	        </Grid>
 					{/* LEFT end */}

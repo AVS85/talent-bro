@@ -33,7 +33,7 @@ function СmpGRID(props){
 
 export function Advances(){
 	return (
-		<section className={styles.wrapper}>
+		<section id="advances" className={styles.wrapper}>
 			<Container className={styles.container}>
 				<div className={styles.containerTitle}>
 					<Title 
