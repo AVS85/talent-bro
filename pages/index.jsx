@@ -32,8 +32,8 @@ export default function Home() {
 			<Userflow />
 			<LogotypeCarousel /> */}
 			<Feedback />
-			<Banner />
-			<ContactForm />
+			{/* <Banner />
+			<ContactForm /> */}
 			<Footer />
     </div>
   )

@@ -13,48 +13,46 @@ import telegram from './assets/telegram.svg'
 export function Footer(){
 	return (
 		<footer className={styles.wrapper} >
-			<Container className={styles.footer} sx={{padding: '15px'}}>
+			<Container className={styles.container}>
 	      <Grid container 
-				spacing={3} 
 				xs={12}
 				>
 
 	        <Grid item
+					className={styles.logotype}
 					xs={12}
 					md={3}
-					sx={{
-						// border: '1px solid red',
-						display: 'flex',
-						flexDirection: 'column',
-						justifyContent: 'space-between'
-					}} 
 					>
 	          <div>
-							<img src={logo.src} alt="logo" />
+							<img 
+							className={styles.logo} 
+							src={logo.src} 
+							alt="logo" 
+							/>
 						</div>
-						<div>© TalentBro 2022</div>
+						<div className={styles.copyrightDesktop}>© TalentBro 2022</div>
 	        </Grid>
 
 	        <Grid item
+					className={styles.documents}
 					xs={12}
 					md={4}
-					// sx={{border: '1px solid red'}} 
 					>
 						<ul>
-							<li className={styles.select}>Реквизиты</li>
+							<li className={styles.select}><b>Реквизиты</b></li>
 							<li>Договор-оферта</li>
 							<li>Политика конфиденциальности</li>
 							<li>Условия использования</li>
 						</ul>
 	        </Grid>
 
-	        <Grid
+	        <Grid item
+					className={styles.contacts}
 					xs={12}
-					md={4}
-					// sx={{border: '1px solid red'}} 
+					md={4} 
 					>
 						<ul>
-							<li>Контакты</li>
+							<li><b>Контакты</b></li>
 							<li>hello.talentbro@gmail.com</li>
 						</ul>
 						<div className={styles.social}>
@@ -63,6 +61,8 @@ export function Footer(){
 	        </Grid>
 
 	      </Grid>
+
+				<div className={styles.copyrightMobile}>© TalentBro 2022</div>
 			</Container>
 			
 		</footer>
