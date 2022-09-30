@@ -21,8 +21,8 @@ export function ContactForm(){
 	const [email, setEmail] = useState(null)
 	const [phone, setPhone] = useState(null)
 
-	function onSendForm(){
-		console.log('ddddd');
+	async function onSendForm(){
+		//TODO проверка на заполнение формы
 		let data = {
 			name,
 			email,
@@ -31,18 +31,37 @@ export function ContactForm(){
 			// "g-recaptcha-response": grecaptcha.getResponse()
 		}
 
-		axios.post("https://getform.io/f/3fb0ea34-2a92-41eb-a7e5-e3934ac8664a", data)
-		.then( (response) => {
-			// fbq('track', 'Lead'); // pixel
-			
-			// this.isSuccess = response.data.success ? true : false;
-			// this.isSuccess = (response.status == 200) ? true : false;
-			console.log('response', response);
+		const response = await axios({
+      method: "POST",
+      url: `https://getform.io/f/3fb0ea34-2a92-41eb-a7e5-e3934ac8664a`,
+      data
+    })
+    .then(response => {
+			console.log('[then - response]', response)
+			return response
 		})
-		.catch( (response) => {
-			console.error(response);
-		});
+    .catch((error) => {
+      console.warn("[catch - error.response]", error.response)
+      if (error.response) {
+				return error.response
+			} else {
+				return error
+			}
+    });
 
+		switch (response.status) {
+			case 200:
+				console.log('Успешно отправлено')
+				break;
+			case 429:
+				console.log('Таймаут 60 сек')
+				break;
+		
+			default:
+				console.log('Похоже что то пошло не так... попробуйте позднее')
+				break;
+		}
+	
 	}
 
 
@@ -78,23 +97,30 @@ export function ContactForm(){
 					md={6}
 					// sx={{border: '1px solid red'}} 
 					>
-			      <form
+			      {/* <form
 		        action="https://getform.io/f/3fb0ea34-2a92-41eb-a7e5-e3934ac8664a"
 		        encType="multipart/form-data"
 		        method="POST"
 		        target="_blank"
 						className={styles.formWrapper}
-			      >
+			      > */}
+						<div className={styles.formWrapper}>
 							<Box sx={{pb: '20px'	}}>
-								<Input type="text" name="name" placeholder="Ваше имя*" />
+								<Input type="text" name="name" placeholder="Ваше имя*"
+								onChange={(e)=> setName(e.target.value)} 
+								/>
 							</Box>
 
 							<Box sx={{pb: '20px'	}}>
-								<Input type="email" name="email" placeholder="E-mail*"  />
+								<Input type="email" name="email" placeholder="E-mail*"
+								onChange={(e)=> setEmail(e.target.value)} 
+								/>
 							</Box>
 
 							<Box sx={{pb: '20px'	}}>
-								<Input type="text" name="phone" placeholder="Телефон"  />
+								<Input type="text" name="phone" placeholder="Телефон" 
+								onChange={(e)=> setPhone(e.target.value)} 
+								/>
 							</Box>
 
 							<Box className={styles.attachedBox}>
@@ -131,8 +157,8 @@ export function ContactForm(){
 							title="Отправить" 
 							onClick={onSendForm}
 							/>
-
-						</form>
+						</div>
+						{/* </form> */}
 						
 	        </Grid>
 
