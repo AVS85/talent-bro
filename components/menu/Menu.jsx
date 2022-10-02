@@ -23,27 +23,47 @@ import { Link, animateScroll as scroll } from "react-scroll";
 // import bird from './assets/bird.png'
 // import hand from './assets/hand.png'
 import burger from './assets/burger.svg'
+import close from './assets/close.svg'
 
 function CmpPopupLayer({
 	// isActive = false,
 	isActive = true,
 	onClose = () => {}
 }){
+	
+	function scrollToHash(hash){
+		// console.log('hash', hash);
+		// console.log('Scroll', scroll);
+
+		const coord = document.getElementById(hash).getBoundingClientRect()
+		// console.log('coord', coord);
+
+		hash && scroll.scrollTo(coord.y, {
+			duration: 1500,
+			delay: 100,
+			smooth: true,
+			// containerId: hash,
+			// containerId: 'ContainerElementID',
+			offset: -50, // Scrolls to element + 50 pixels down the page
+		})
+	}
 	return (
 		<div 
 		className={`${styles.popupLayer} ${isActive && styles.popupLayerActive}`}
 		onClick={() => onClose()}
 		>
-				<Link to={'schedulerates'}
-		    spy={true} smooth={true} offset={-70} duration={500}
-				>Тарифы</Link>
+			<div className={styles.closeWrap}>
+				<img src={close.src} alt="close" />
+			</div>
 
-				<Link to={'contactform'}
-		    spy={true} smooth={true} offset={-70} duration={500}
-				>Заказать</Link>
+				<div onClick={()=>scrollToHash('advances')}>Резюме</div>
+				<div onClick={()=>scrollToHash('schedulerates')}>Тарифы</div>
+				<div onClick={()=>scrollToHash('contactform')}>Напишите нам</div>
 
-					{/* <CmpPopDownMenu title="Блог" link="https://taalentbro.notion.site/"/> */}
+				<hr />
 
+				<a href="https://taalentbro.notion.site/7c5e414fc879482986af1dabd14359ae" target="_blank" rel="noopener noreferrer">Сделать самому</a>
+				<a href="https://taalentbro.notion.site/" target="_blank" rel="noopener noreferrer">Блог</a>
 
 		</div>
 	)
@@ -69,6 +89,7 @@ function CmpPopDownMenu({
 					<a
 			    href={link}
 					target={"_blank"}
+					rel="noreferrer"
 					>
 						{title}
 					</a>
@@ -97,6 +118,7 @@ function CmpPopDownMenu({
 										<a
 								    href={item.link}
 										target={"_blank"}
+										rel="noreferrer"
 										>
 											{item.title}
 										</a>

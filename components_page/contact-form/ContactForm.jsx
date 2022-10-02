@@ -123,7 +123,7 @@ export function ContactForm(){
 								/>
 							</Box>
 
-							<Box className={styles.attachedBox}>
+							{/* <Box className={styles.attachedBox}>
 								<div>
 									<span>Прикрепите&nbsp;резюме<br />PDF, DOCX</span>
 								</div>
@@ -135,7 +135,7 @@ export function ContactForm(){
 									placeholder="Телефон"
 									/>
 								</div>
-							</Box>
+							</Box> */}
 
 
 							<Box sx={{

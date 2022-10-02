@@ -6,17 +6,25 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #000;
+	background: $bgAlt;
 	min-height: 100vh;
 	min-width: 100%;
 	z-index: 999;
+	user-select: none;
+	font-family: 'main500';
+	.closeWrap {
+		// border: 1px solid red;
+		top: 33px;
+		right: 15px;
+		position: absolute;
+	}	
 	&.popupLayerActive {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		font-size: 24px;
-		color: white;
+		color: $textMain;
 		.a {
 			// display: block;
 			// width: 100%;
