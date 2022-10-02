@@ -22,19 +22,40 @@ import { Link, animateScroll as scroll } from "react-scroll";
 // import bgImage from './assets/bg.jpg'
 // import bird from './assets/bird.png'
 // import hand from './assets/hand.png'
-// import bgImage from './assets/bg.jpg'
+import burger from './assets/burger.svg'
+
+function CmpPopupLayer({
+	// isActive = false,
+	isActive = true,
+	onClose = () => {}
+}){
+	return (
+		<div 
+		className={`${styles.popupLayer} ${isActive && styles.popupLayerActive}`}
+		onClick={() => onClose()}
+		>
+				<Link to={'schedulerates'}
+		    spy={true} smooth={true} offset={-70} duration={500}
+				>Тарифы</Link>
+
+				<Link to={'contactform'}
+		    spy={true} smooth={true} offset={-70} duration={500}
+				>Заказать</Link>
+
+					{/* <CmpPopDownMenu title="Блог" link="https://taalentbro.notion.site/"/> */}
+
+
+		</div>
+	)
+}
+
 function CmpPopDownMenu({
-	title,
-	link,
-	hash,
-	items = null,
+	title, link, hash, items = null,
 }){
 
 	const [isFocusTop, setIsOpenTop] = useState(false)
 
-	function onMouseOver(bool){
-		setIsOpenTop(bool)
-	}
+	function onMouseOver(bool){ setIsOpenTop(bool) }
 
 	return (
 		<div className={styles.popDownMenuWrapper}>
@@ -105,6 +126,7 @@ function CmpPopDownMenu({
 }
 
 export function Menu(){
+	const [isMobileActive, setIsMobileActive] = useState(false)
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
@@ -125,6 +147,14 @@ export function Menu(){
 				</Box>
 				<Box sx={{ml: '5px'}}>
 					<CmpPopDownMenu title="Напишите нам" hash="contactform"/>
+				</Box>
+				<Box sx={{ml: '5px'}}>
+					<img src={burger.src} alt="menu" 
+					onClick={()=>setIsMobileActive(!isMobileActive)}/>
+					<CmpPopupLayer 
+					isActive={isMobileActive}
+					onClose={()=>setIsMobileActive(false)}
+					/>
 				</Box>
 			</Container>
 		</section>

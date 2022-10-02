@@ -1,5 +1,30 @@
 @import "../../styles/colors.module";
 
+//POPUP LAYER
+.popupLayer {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	min-height: 100vh;
+	min-width: 100%;
+	z-index: 999;
+	&.popupLayerActive {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		font-size: 24px;
+		color: white;
+		.a {
+			// display: block;
+			// width: 100%;
+			color: $textAlt;
+		}
+	}
+}
+//POPUP LAYER
 .wrapper {
 	position: relative;
 	// border: 1px solid $textGrey;
@@ -8,6 +33,7 @@
 	.container {
 		display: flex;
 		justify-content: flex-end;
+		align-items: center;
 	}
 }
 
