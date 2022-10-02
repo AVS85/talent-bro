@@ -1,95 +1,36 @@
 @import "../../styles/colors.module";
 
-//POPUP LAYER
-.popupLayer {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: $bgAlt;
-	min-height: 100vh;
-	min-width: 100%;
-	z-index: 999;
-	user-select: none;
-	font-family: 'main500';
-	.closeWrap {
-		// border: 1px solid red;
-		top: 33px;
-		right: 15px;
-		position: absolute;
-	}	
-	&.popupLayerActive {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		font-size: 24px;
-		color: $textMain;
-		.a {
-			// display: block;
-			// width: 100%;
-			color: $textAlt;
-		}
-	}
-}
-//POPUP LAYER
 .wrapper {
 	position: relative;
 	// border: 1px solid $textGrey;
 	padding: 45px 0 0 0;
 	z-index: 1;
-	.container {
+	.desktopMenu {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-	}
-}
-
-.popDownMenuWrapper {
-	// border: 1px solid $textGrey;
-	// width: calc(100% + 10px);
-	position: relative;
-	// &:hover {
-	// }
-	.title {
-		// border: 1px solid $textGrey;
-
-		color: $textGrey;
-		font-family: 'main500';
-		font-size: 20px;
-		line-height: 20px;
-		padding: 5px 15px;
-		cursor: pointer;
-		&:hover {
-			background-color: $bgAlt;
-			color: $textAcc;
-			// font-family: 'main400';
-			font-size: 20px;
-			line-height: 20px;
+		@media (max-width: 768px) {
+			display: none;
+			// background-size: 90px;
 		}
 	}
-
-	.itemsBox {
-		// border: 1px solid $textGrey;
-		background-color: $bgAlt;
-
-		position: absolute;
-		left: 0px;
-		top: 100%;
-		width: 100%;
-		.subitem {
-			color: $textGrey;
-			font-family: 'main400';
-			font-size: 15px;
-			line-height: 15px;
-			padding: 5px 0 5px 15px;
-			// margin: 1px 0;
-			cursor: pointer;
-			&:hover {
-				color: $textAlt;
-				background-color: $elemAcc;
-	
-			}
+	.mobileMenu {
+		position: relative;
+		border: 1px solid $textGrey;
+		display: flex;
+		// justify-content: flex-end;
+		align-items: flex-end;
+		// flex-wrap: nowrap;
+		flex-direction: column;
+		@media (min-width: 768px) {
+			display: none;
+		}
+		.mobileMenuButton {
+			z-index: 99;
+		}
+		.mobilePopupWrap {
+			z-index: 98;
+			// position: relative;
 		}
 	}
 }
