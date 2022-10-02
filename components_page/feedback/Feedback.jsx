@@ -32,10 +32,11 @@ export function Feedback(){
 		dynamicMainBullets: 1,
 		// type: 'progressbar',
     clickable: true,
+		// el: '.fffff'
     renderBullet: function (index, className) {
       // return '<span class="' + className + '">' + (index + 1) + "</span>";
-      return `<span class="${className}"></span>`;
-      // return Bull();
+      // return `<span class="${className}"></span>`;
+      return `<div class="${className}"></div>`;
     },
   };
 
@@ -47,6 +48,8 @@ export function Feedback(){
 					title="Клиенты говорят нам, что плюсом к резюме они получают свежий взгляд на свой опыт и +100 баллов к самооценке"
 					/>
 				</Box>
+
+				<div className="fffff"> </div>
 
 				<Swiper
 				className='swiperFeedBack'

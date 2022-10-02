@@ -53,11 +53,14 @@ export function Footer(){
 					>
 						<ul>
 							<li><b>Контакты</b></li>
-							<li>hello.talentbro@gmail.com</li>
+							<li>
+								<a className={styles.alink}
+								href="mailto:hello.talentbro@gmail.com">hello.talentbro@gmail.com</a>
+							</li>
 						</ul>
 						<div className={styles.social}>
 							<a  
-							className={styles.link}
+							className={styles.alink}
 							href="https://t.me/talentbro"
 							target="_blank"
 							>
