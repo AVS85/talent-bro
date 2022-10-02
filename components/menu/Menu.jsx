@@ -14,7 +14,7 @@ import { Box, Container, TextField } from '@mui/material';
 import { Link, animateScroll as scroll } from "react-scroll";
 //own
 import {PopDownList} from './cmpPopDownList/PopDownList'
-import {MobilePopup} from './cmpMobilePopup/MobilePopup'
+import {MobileMenu} from './cmpMobileMenu/MobileMenu'
 // import {Input} from '../../components/atom/input/Input'
 // import {Title} from '../../components/atom/title/Title'
 // import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
@@ -56,26 +56,26 @@ export function Menu(){
 					</Box>
 				</Box>
 
-				<Box className={styles.mobileMenu}>
-					<div className={styles.mobileMenuButton}>
-						{ (isMobileActive === true) && 
-						<img src={close.src} alt="menu" onClick={()=>setIsMobileActive(!isMobileActive)} /> 
-						}
-
-						{ (isMobileActive === false) && 
-						<img src={burger.src} alt="menu" onClick={()=>setIsMobileActive(!isMobileActive)} /> 
-						}
+				<Box className={styles.mobileMenuSwitcherWrap}>
+					<div className={styles.mobileMenuSwitcher}>
+						<img 
+							src={isMobileActive ? close.src : burger.src} 
+							alt="menu" 
+							onClick={()=>setIsMobileActive(!isMobileActive)} 
+						/> 
 					</div>
 
-					<div className={styles.mobilePopupWrap}>
-						<MobilePopup 
-						isActive={isMobileActive}
-						onClose={()=>setIsMobileActive(false)}
-						/>
-					</div>
 				</Box>
 
 			</Container>
+
+			<div className={styles.mobileMenuWrap}>
+				<MobileMenu 
+				isActive={isMobileActive}
+				onClose={()=>setIsMobileActive(false)}
+				/>
+			</div>
+
 		</section>
 	)
 } 

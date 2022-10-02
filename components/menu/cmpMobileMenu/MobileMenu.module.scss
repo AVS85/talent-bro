@@ -13,6 +13,7 @@
 		z-index: 0;
 		user-select: none;
 		font-family: 'main500';
+		opacity: .98;
 		// .closeWrap {
 		// 	border: 1px solid red;
 		// 	top: 33px;
@@ -20,7 +21,7 @@
 		// 	position: absolute;
 		// }	
 		&.popupLayerActive {
-			border: 1px solid red;
+			// border: 1px solid red;
 
 			display: flex;
 			align-items: center;
@@ -33,6 +34,19 @@
 				// width: 100%;
 				color: $textAlt;
 			}
+		}
+
+		.menuItem {
+			margin: 10px 0;
+		}
+
+		.hr {
+			// border-bottom: 1px solid $elemAcc;
+			// flex: 1;
+			margin: 15px;
+			// padding: 0 35px;
+			// width: 100%;
+			opacity: .65;
 		}
 	}
 	//POPUP LAYER - END

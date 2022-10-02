@@ -14,9 +14,10 @@
 			// background-size: 90px;
 		}
 	}
-	.mobileMenu {
+	
+	.mobileMenuSwitcherWrap {
 		position: relative;
-		border: 1px solid $textGrey;
+		// border: 1px solid $textGrey;
 		display: flex;
 		// justify-content: flex-end;
 		align-items: flex-end;
@@ -25,10 +26,10 @@
 		@media (min-width: 768px) {
 			display: none;
 		}
-		.mobileMenuButton {
+		.mobileMenuSwitcher {
 			z-index: 99;
 		}
-		.mobilePopupWrap {
+		.mobileMenuWrap {
 			z-index: 98;
 			// position: relative;
 		}
