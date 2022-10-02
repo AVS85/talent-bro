@@ -56,7 +56,13 @@ export function Footer(){
 							<li>hello.talentbro@gmail.com</li>
 						</ul>
 						<div className={styles.social}>
-							<img src={telegram.src} alt="telegram" />
+							<a  
+							className={styles.link}
+							href="https://t.me/talentbro"
+							target="_blank"
+							>
+								<img src={telegram.src} alt="telegram" />
+							</a>
 						</div>
 	        </Grid>
 

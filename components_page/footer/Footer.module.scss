@@ -34,11 +34,15 @@
 			}
 		}
 		.contacts {
-			// border: 1px solid red;
 			.social {
+				display: flex;
 				padding-top: 40px;
 				@media (max-width: 899px) {
 					padding-top: 0px;
+				}
+				.link {
+					// border: 1px solid red;
+					flex: 0;
 				}
 			}
 		}

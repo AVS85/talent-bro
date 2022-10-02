@@ -42,11 +42,14 @@
 
 		.hr {
 			// border-bottom: 1px solid $elemAcc;
-			// flex: 1;
+			// position: absolute;
+			// bottom: -15px;
+			// left: 0px;
 			margin: 15px;
-			// padding: 0 35px;
-			// width: 100%;
-			opacity: .65;
+			height: 7px;
+			width: 219px;
+			background-image: url('./assets/line.png');
+			background-repeat: no-repeat;
 		}
 	}
 	//POPUP LAYER - END
