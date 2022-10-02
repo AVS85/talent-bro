@@ -1,0 +1,130 @@
+/* Соответвие названий
+100	Тонкий (Волосяной) Thin (Hairline)
+200	Дополнительный светлый (Сверхсветлый) Extra Light (Ultra Light)
+300	Светлый Light
+400	Нормальный Normal
+500	Средний Medium
+600	Полужирный Semi Bold (Demi Bold)
+700	Жирный Bold
+800	Дополнительный жирный (Сверхжирный) Extra Bold (Ultra Bold)
+900	Чёрный (Густой) Black (Heavy) 
+*/
+
+@font-face {
+  font-family: 'main300';
+  src: url('/fonts/GraphikLCG-Light.ttf');
+}
+@font-face {
+	font-family: 'main400';
+	src: url('/fonts/GraphikLCG-Regular.ttf');
+}
+@font-face {
+  font-family: 'main500';
+  src: url('/fonts/GraphikLCG-Medium.ttf');
+}
+@font-face {
+  font-family: 'main600';
+  src: url('/fonts/GraphikLCG-Semibold.ttf');
+}
+@font-face {
+	font-family: 'main700';
+  src: url('/fonts/GraphikLCG-Bold.ttf');
+}
+.swiperScheduleRates {
+	.swiper-pagination {
+		// border: 3px solid red;
+		position: relative !important;
+		top: 0;
+		width: 100% !important;
+		margin-top: 60px;
+		
+		.swiper-pagination-bullet {
+			/* border: 3px solid red; */
+			display: inline-block;
+
+			min-width: 20px;
+			min-height: 20px;
+			background: #9A33FE;
+		}
+	}
+}
+.swiperFeedBack {
+	// display: none;
+	.swiper-pagination {
+		// border: 3px solid red;
+		position: relative !important;
+		top: 0;
+		width: 100% !important;
+		margin-top: 60px;
+
+		// display: flex !important;
+		// justify-content: center !important;
+		// padding-top: 20px;
+		.swiper-pagination-bullet {
+			/* border: 3px solid red; */
+			display: inline-block;
+
+			min-width: 20px;
+			min-height: 20px;
+			background: #9A33FE;
+		}
+
+		// .swiper-pagination-bullet-active-main {
+		// 	/* border: 3px solid red; */
+		// 	display: inline-block;
+
+		// 	min-width: 20px;
+		// 	min-height: 20px;
+		// 	background: rgba(217, 217, 217, 0.4)  ;
+
+		// }
+		// .swiper-pagination-bullet-active {
+		// 	/* border: 3px solid red; */
+		// 	display: inline-block;
+
+		// 	min-width: 20px;
+		// 	min-height: 20px;
+		// 	background: #9A33FE;
+		// }
+
+		// .swiper-pagination-bullet-active-prev,
+		// .swiper-pagination-bullet-active-next{
+		// 	display: inline-block !important;
+
+		// 	min-width: 20px;
+		// 	min-height: 20px;
+		// 	// background: red !important;
+		// 	background: rgba(217, 217, 217, 0.4) !important;
+			
+		// }
+	}
+}
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
+    /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* html {
+    color-scheme: dark;
+  } */
+  /* body {
+    color: white;
+    background: black;
+  } */
+}

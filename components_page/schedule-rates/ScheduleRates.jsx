@@ -23,6 +23,19 @@ import {scheduleRates} from './assets/scheduleRates'
 export function ScheduleRates(){
 	const [sr] = useState(scheduleRates || [])
 
+  const pagination = {
+		dynamicBullets: true,
+		dynamicMainBullets: 1,
+		// type: 'progressbar',
+    clickable: true,
+    renderBullet: function (index, className) {
+      // return '<span class="' + className + '">' + (index + 1) + "</span>";
+			return `<span class="${className}"></span>`;
+
+      // return Bull();
+    },
+  };
+
 	return (
 		<section  id="schedulerates" className={styles.wrapper}>
 			<Container className={styles.container}>
@@ -36,6 +49,7 @@ export function ScheduleRates(){
 					margin: '64px 0'
 				}}>
 					<Swiper
+						className='swiperScheduleRates'
 			      spaceBetween={20}
 			      slidesPerView={1}
 			      // onSlideChange={() => console.log('slide change')}
@@ -43,11 +57,8 @@ export function ScheduleRates(){
 						// observeSlideChildren={true}
 						// observer={true}
 						// observerUpdate={() => console.log('slide change')}
-						// pagination={pagination}
-						// pagination={{
-						// 	dynamicBullets: true,
-						// }}
-						// modules={[Pagination]}
+						pagination={pagination}
+						modules={[Pagination]}
 						breakpoints={{
 							// when window width is >= 640px
 							567: {

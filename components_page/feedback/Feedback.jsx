@@ -29,10 +29,12 @@ export function Feedback(){
 
   const pagination = {
 		dynamicBullets: true,
+		dynamicMainBullets: 1,
+		// type: 'progressbar',
     clickable: true,
     renderBullet: function (index, className) {
       // return '<span class="' + className + '">' + (index + 1) + "</span>";
-      return '<span class="' + className + ' bull">' + (index + 1) + "</span>";
+      return `<span class="${className}"></span>`;
       // return Bull();
     },
   };
@@ -47,6 +49,7 @@ export function Feedback(){
 				</Box>
 
 				<Swiper
+				className='swiperFeedBack'
 		      spaceBetween={40}
 		      slidesPerView={1}
 		      // onSlideChange={() => console.log('slide change')}
@@ -54,11 +57,8 @@ export function Feedback(){
 					// observeSlideChildren={true}
 					// observer={true}
 					// observerUpdate={() => console.log('slide change')}
-					// pagination={pagination}
-					// pagination={{
-					// 	dynamicBullets: true,
-					// }}
-					// modules={[Pagination]}
+					pagination={pagination}
+					modules={[Pagination]}
 					breakpoints={{
 						// when window width is >= 640px
 						768: {
