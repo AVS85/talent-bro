@@ -1,8 +1,5 @@
 import styles from './ScheduleRatesCard.module.scss'
 
-//mui
-import { Box } from '@mui/material';
-
 export function ScheduleRatesCard({
 	data,
 	title,
@@ -16,10 +13,12 @@ export function ScheduleRatesCard({
 		<section className={`${styles.wrapper} ${data.styleActive && styles.wrapperActive}`}>
 
 			<div 
-			className={styles.header}
+			className={styles.headerCard}
 			dangerouslySetInnerHTML={{__html: data.header}}
 			/>
 			
+			{/* {data.badge && <div className={styles.badge} />} */}
+
 			<div className={styles.contentWrapper}>
 
 				<div className={styles.title}
@@ -27,6 +26,13 @@ export function ScheduleRatesCard({
 				/>
 				
 				<div className={styles.items}>
+					
+					{data.subHeaderItems &&
+					<div className={styles.subHeaderItems}
+					dangerouslySetInnerHTML={{__html: data.subHeaderItems}}
+					/>
+					}
+
 					<ul className={styles.ul}>
 					{data.items.map( (item, index) => 
 						<li 

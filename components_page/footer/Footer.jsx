@@ -40,9 +40,15 @@ export function Footer(){
 					>
 						<ul>
 							<li className={styles.select}><b>Реквизиты</b></li>
-							<li>Договор-оферта</li>
-							<li>Политика конфиденциальности</li>
-							<li>Условия использования</li>
+							{/* <li>Договор-оферта</li> */}
+							<li>
+								<a className={styles.alink}
+								href="/assets/documents/privacy_policy.pdf"
+								target="_blank">Политика конфиденциальности</a></li>
+							<li>
+								<a className={styles.alink}
+								href="/assets/documents/terms_of_service.pdf"
+								target="_blank">Условия использования</a></li>
 						</ul>
 	        </Grid>
 
