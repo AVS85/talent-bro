@@ -80,10 +80,6 @@ export function LogotypeCarousel(){
 							slidesPerView: 5,
 							spaceBetween: 40
 						},
-						// 998: {
-						// 	// slidesPerView: 3,
-						// 	spaceBetween: 40
-						// }
 					}}
 		    >
 					{

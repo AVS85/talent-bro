@@ -36,7 +36,8 @@ export function Main(){
 							<img className={styles.icon} src={bird.src} alt="bird" />
 							<img className={styles.icon} src={hand.src} alt="hand" />
 						</div>
-						<div className={styles.title}>TalentBro</div>
+						<div className={styles.title}>
+							<span className={styles.titleSpan}>TalentBro</span></div>
 						<div className={styles.subtitle}>Сервис профессиональных резюме</div>
 						<div className={styles.text}><span>Сделаем ревью вашего резюме,<br/>расскажем,&nbsp;что улучшить или напишем<br/>его полностью за вас</span></div>
 						<div className={styles.buttonWrapper}>

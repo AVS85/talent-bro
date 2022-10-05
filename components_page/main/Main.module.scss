@@ -13,10 +13,14 @@
 			margin-bottom: 48px;
 		}
 		.icon {
+			height: 100px;
+			width: 100px;
 			margin-right: 12px !important;
 		}
 	}
 	.title {
+		// border: 1px solid red;
+		position: relative;
 		font-family: 'main700';
 		font-weight: 700;
 		font-size: 80px;
@@ -27,6 +31,26 @@
 			font-size: 55px;
 			line-height: 55px;
 			margin-bottom: 24px;
+		}
+		.titleSpan{
+			// border: 1px solid red;
+			position: relative;
+			&::after {
+				// border: 1px solid red;
+				content: '';
+				position: absolute;
+				top: -30px;
+				right: -60px;
+				height: 60px;
+				width: 60px;
+				background-image: url('./assets/zigzag.png');
+				background-repeat: no-repeat;
+				background-size: 75px;
+				background-size: contain;
+				@media (max-width: 998px) {
+					display: none;
+				}
+			}
 		}
 	}
 	.subtitle {

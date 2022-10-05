@@ -39,7 +39,9 @@ export function Advances2(){
 							display: { xs: 'none', md: 'block' },
 							backgroundImage: `url(${bgImage.src})`,
 							backgroundRepeat: 'no-repeat',
-							backgroundPosition: 'center'
+							backgroundPosition: 'center',
+							backgroundSize: '80%',
+
 						}} 
 					>
 	        </Grid>
