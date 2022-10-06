@@ -1,5 +1,5 @@
 import styles from './LogotypeCarousel.module.scss'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 //mui
 import { Box, Container, TextField } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -30,12 +30,12 @@ import { style } from '@mui/system';
 export function LogotypeCarousel(){
 	const [lt] = useState(logotypes || [])
 
-	// const Slide = (item, index, styles) => {
-	// 	return (
-	// 		<dix className={style.slidewrapper}>
-	// 			<img src={`/assets/logotypes/${item.logo}`} alt={`${item.alt}`} />
-	// 		</dix>
-	// 	)
+	// const sliderRef = useRef(null) 
+
+	// function onClickNextSlide(){
+	// 	console.log('sdsdsd');
+	// 	// sliderRef.current.swiper.slidePrev();
+	// 	sliderRef.current.swiper.slideNext();
 	// }
 
 	return (
@@ -49,9 +49,12 @@ export function LogotypeCarousel(){
 				</Box>
 
 				<Swiper
+					// ref={sliderRef}
+
 		      spaceBetween={40}
 					// slidesPerView={"auto"}
 		      slidesPerView={1}
+					// loop={true}
 		      // onSlideChange={() => console.log('slide change')}
 		      // onSwiper={(swiper) => console.log(swiper)}
 					// observeSlideChildren={true}
@@ -62,6 +65,9 @@ export function LogotypeCarousel(){
 					// 	dynamicBullets: true,
 					// }}
 					// modules={[Pagination]}
+					// navigation={{
+					// 	nextEl: navigationNextRef.current,
+					// }}
 					breakpoints={{
 						// when window width is >= 640px
 						320: {
@@ -95,6 +101,11 @@ export function LogotypeCarousel(){
 						</SwiperSlide>)
 					}
 		    </Swiper>
+
+				{/* <button 
+				className={styles.btnNext}
+				onClick={()=>onClickNextSlide()}
+				>next</button> */}
 
 			</Container>
 		</section>

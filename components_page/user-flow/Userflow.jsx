@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 //nextjs
 import styles from './Userflow.module.scss'
 // import styles2 from './Feedback.scss'
@@ -23,6 +23,14 @@ import {userflow} from './assets/userflow'
 export function Userflow(){
 	const [uf, setUserflow] = useState(userflow || ['d'])
 
+	const sliderRef = useRef(null) 
+
+	function onClickNextSlide(){
+		console.log('sdsdsd');
+		// sliderRef.current.swiper.slidePrev();
+		sliderRef.current.swiper.slideNext();
+	}
+
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
@@ -31,6 +39,7 @@ export function Userflow(){
 				</Box>
 
 				<Swiper
+				ref={sliderRef}
 		      spaceBetween={0}
 		      slidesPerView={1}
 		      // onSlideChange={() => console.log('slide change')}
@@ -60,6 +69,14 @@ export function Userflow(){
 						uf.map((item,index) => <SwiperSlide style={{height: 'auto'}} key={index}><UserflowStep data={item} /></SwiperSlide>)
 					}
 		    </Swiper>
+
+				<nav className={styles.sliderNav}>
+					<button 
+					className={styles.btnNext}
+					onClick={()=>onClickNextSlide()}
+					/>
+				</nav>
+
 			</Container>
 		</section>
 	)
