@@ -11,8 +11,8 @@ import { Pagination } from "swiper";
 import 'swiper/css';
 import "swiper/css/pagination";
 //own
-import {Button} from '../../components/atom/button/Button'
-import {Input} from '../../components/atom/input/Input'
+// import {Button} from '../../components/atom/button/Button'
+// import {Input} from '../../components/atom/input/Input'
 import {Title} from '../../components/atom/title/Title'
 import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
 
