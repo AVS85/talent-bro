@@ -38,14 +38,14 @@ export function Footer(){
 					xs={12}
 					md={4}
 					>
-						<ul>
-							<li className={styles.select}><b>Реквизиты</b></li>
+						<ul className={`${styles.ul}`}>
+							<li className={`${styles.li} ${styles.liSelect}`}><b>Реквизиты</b></li>
 							{/* <li>Договор-оферта</li> */}
-							<li>
+							<li className={`${styles.li}`}>
 								<a className={styles.alink}
 								href="/assets/documents/privacy_policy.pdf"
 								target="_blank">Политика конфиденциальности</a></li>
-							<li>
+							<li className={`${styles.li}`}>
 								<a className={styles.alink}
 								href="/assets/documents/terms_of_service.pdf"
 								target="_blank">Условия использования</a></li>
@@ -57,9 +57,9 @@ export function Footer(){
 					xs={12}
 					md={4} 
 					>
-						<ul>
-							<li><b>Контакты</b></li>
-							<li>
+						<ul className={`${styles.ul}`}>
+							<li className={`${styles.li}`}><b>Контакты</b></li>
+							<li className={`${styles.li}`}>
 								<a className={styles.alink}
 								href="mailto:hello.talentbro@gmail.com">hello.talentbro@gmail.com</a>
 							</li>

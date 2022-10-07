@@ -2,81 +2,66 @@
 
 .wrapper {
 	/* border: 2px solid red; */
-	// background: $bgAcc;
 	font-size: 20px;
 	font-family: 'main400';
-}
-
-.container {
-	// border: 1px solid red;
-	padding: 90px 15px;
-
-	// background-image: url('./assets/bird.svg');
-	// background-position: 25px 100%;
-	// background-repeat: no-repeat;
-	// background-size: 185px;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	.container {
+		// border: 1px solid red;
+		padding: 90px 15px;
 	
-	// @media (max-width: 768px) {
-	// 	background-size: 90px;
-	// }
-	// @media (max-width: 998px) {
-	// 	background-size: 120px;
-	// }
-}
-
-// .wrapper header {
-// 	color: #FFFFFF;
-// 	font-family: 'main500';
-// 	font-size: 30px;
-// 	line-height: 30px;
-// 	min-width: 250px;
-// 	padding-bottom: 50px;
-// }
-
-.titleWrapper {
-	// border: 3px solid rgb(8, 116, 51);
-	display: flex;
-	flex: 0;
-	padding-bottom: 30px;
-	.title {
-		// border: 1px solid rgb(33, 8, 116);
-		font-family: 'main500';
-		font-size: 40px;
-		line-height: 40px;
-		position: relative;
-		padding: 45px 95px 0 0;
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			height: 75px;
-			width: 75px;
-			background-image: url('./assets/zigzag.svg');
-			background-repeat: no-repeat;
-			background-size: 75px;
-		}
-	}
-}
-
-.logo {
-	// border: 1px solid red;
-	max-width: 302px;
-	width: 100%;
-	@media (max-width: 899px) {
-		padding-bottom: 60px;
-	}
-}
-
-.formWrapper {
-	.attachedBox {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		padding-bottom: 20px;
-	}
-}
+
+		.titleWrapper {
+			// border: 3px solid rgb(8, 116, 51);
+			display: flex;
+			flex: 0;
+			padding-bottom: 30px;
+			.title {
+				// border: 1px solid rgb(33, 8, 116);
+				font-family: 'main500';
+				font-size: 40px;
+				line-height: 40px;
+				position: relative;
+				padding: 45px 95px 0 0;
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0px;
+					right: 0px;
+					height: 75px;
+					width: 75px;
+					background-image: url('./assets/zigzag.svg');
+					background-repeat: no-repeat;
+					background-size: 75px;
+				}
+			}
+		} //.titleWrapper
+
+		.logo {
+			// border: 1px solid red;
+			max-width: 302px;
+			width: 100%;
+			@media (max-width: 899px) {
+				padding-bottom: 60px;
+			}
+		} //.logo
+
+		.formWrapper {
+			.attachedBox {
+				display: flex;
+				align-items: center;
+				padding-bottom: 20px;
+			}
+		} //.formWrapper
+
+	} //.container
+} //.wrapper
+
+
+
+
+
+
+
 

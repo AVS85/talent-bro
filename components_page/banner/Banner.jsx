@@ -18,7 +18,9 @@ export function Banner(){
 	return (
 		<section className={styles.wrapper}>
 			<Container className={styles.container}>
-				<header>Поверь в свой талант с TalentBro!</header>
+				<header className={styles.header}>
+					Поверь в свой талант с TalentBro!
+				</header>
 				<Link
 			    activeClass="active"
 			    to={'contactform'}
