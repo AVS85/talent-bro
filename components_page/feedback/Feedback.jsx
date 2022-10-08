@@ -40,6 +40,41 @@ export function Feedback(){
     },
   };
 
+	function resizePersonalHeight(swiper){
+		// Task: установить одинаковую высоту заголовков на всех карточках клиентов
+		try {
+			let maxRealHeight = 0 // макс высота элемента
+			const {slides} = swiper
+
+			if (!slides) throw "params";
+
+			slides.forEach(slide => {
+				// получить элемент personal
+				const elPersonal = slide.querySelector('[class*=personal]')
+				// сброс minHeight элемента (чтобы узнать реально занимаемую им высоту)
+				elPersonal.style.minHeight = 0 + 'px'
+				// получить высоту элемента 
+				const h = elPersonal.getBoundingClientRect().height
+				// обновить максимум 
+				if ( h > maxRealHeight) maxRealHeight = h
+				// console.log(h);
+			});
+
+			// console.log('maxRealHeight', maxRealHeight);
+			
+			// установить всем элементам одинаковую (наибольшую) высоту
+			slides.forEach(slide => {
+				// получить элемент personal
+				const elPersonal = slide.querySelector('[class*=personal]')
+				// установить макс высоту
+				elPersonal.style.minHeight = maxRealHeight + 'px'
+			});
+		}
+		catch(error){
+			console.log("[resizePersonalHeight]", error);
+		}
+	}
+
 	return (
 		<section id="feedback" className={styles.wrapper}>
 			<Container className={styles.container}>
@@ -55,6 +90,7 @@ export function Feedback(){
 				className='swiperFeedBack'
 		      spaceBetween={40}
 		      slidesPerView={1}
+					onResize={(swiper) => resizePersonalHeight(swiper)}
 		      // onSlideChange={() => console.log('slide change')}
 		      // onSwiper={(swiper) => console.log(swiper)}
 					// observeSlideChildren={true}
