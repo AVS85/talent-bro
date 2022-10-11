@@ -21,6 +21,10 @@ export function ContactForm(){
 	const [email, setEmail] = useState(null)
 	const [phone, setPhone] = useState(null)
 
+	const [isMessageSend, setIsMessageSend] = useState(false)
+	const [isUnknownError, setIsUnknownError] = useState(true)
+	const [isTimeOut, setIsTimeOut] = useState(false)
+
 	async function onSendForm(){
 		//TODO проверка на заполнение формы
 		let data = {
@@ -51,14 +55,20 @@ export function ContactForm(){
 
 		switch (response.status) {
 			case 200:
-				console.log('Успешно отправлено')
+				// console.log('Успешно отправлено')
+				setIsMessageSend(true)
+				setTimeout(() => setIsMessageSend(false), 60000)
 				break;
 			case 429:
-				console.log('Таймаут 60 сек')
+				// console.log('Таймаут 60 сек')
+				setIsTimeOut(true)
+				setTimeout(() => setIsTimeOut(false), 60000)
 				break;
 		
 			default:
-				console.log('Похоже что то пошло не так... попробуйте позднее')
+				// console.log('Похоже что то пошло не так... попробуйте позднее')
+				setIsUnknownError(true)
+				setTimeout(() => setIsUnknownError(false), 10000)
 				break;
 		}
 	
@@ -95,16 +105,27 @@ export function ContactForm(){
 	        <Grid item
 					xs={12}
 					md={6}
-					// sx={{border: '1px solid red'}} 
 					>
-			      {/* <form
-		        action="https://getform.io/f/3fb0ea34-2a92-41eb-a7e5-e3934ac8664a"
-		        encType="multipart/form-data"
-		        method="POST"
-		        target="_blank"
-						className={styles.formWrapper}
-			      > */}
 						<div className={styles.formWrapper}>
+							{isMessageSend && 
+								<div className={styles.notificationWrapper}>
+									<div><b>Сообщение успешно отправлено!</b></div>
+									<div>Повторная отправка возможна через 60 секунд.</div>
+								</div>
+							}
+							{isUnknownError && 
+								<div className={styles.notificationWrapper}>
+									<div><b>Что то пошло не так...!</b></div>
+									<div>Попробуйте отправить сообщение позднее</div>
+									<div>Или напишите нам в телеграмм :)</div>
+								</div>
+							}
+							{isTimeOut && 
+								<div className={styles.notificationWrapper}>
+									<div>Повторная отправка возможна через 60 секунд.</div>
+								</div>
+							}
+								
 							<Box sx={{pb: '20px'	}}>
 								<Input type="text" name="name" placeholder="Ваше имя*"
 								onChange={(e)=> setName(e.target.value)} 
@@ -157,8 +178,8 @@ export function ContactForm(){
 							title="Отправить" 
 							onClick={onSendForm}
 							/>
+
 						</div>
-						{/* </form> */}
 						
 	        </Grid>
 

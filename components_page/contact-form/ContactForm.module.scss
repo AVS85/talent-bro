@@ -48,10 +48,26 @@
 		} //.logo
 
 		.formWrapper {
+			position: relative;
 			.attachedBox {
 				display: flex;
 				align-items: center;
 				padding-bottom: 20px;
+			}
+			.notificationWrapper {
+				position: absolute;
+				// border: 1px solid red;
+				background-color: rgba($bgLht, .95);
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+
+				font-size: 22px;
+				line-height: 36px;
+				font-family: "main400";
 			}
 		} //.formWrapper
 
