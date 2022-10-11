@@ -49,7 +49,10 @@ export function Main(){
 					    offset={-70}
 					    duration={500}
 							>
-								<Button title="Хочу резюме" />
+								<Button 
+								title="Хочу резюме" 
+								onClick={()=>ym(90739912,'reachGoal','i-want-cv')}
+								/>
 							</Link>
 							
 						</div>

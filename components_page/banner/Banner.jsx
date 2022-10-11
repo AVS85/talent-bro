@@ -29,8 +29,11 @@ export function Banner(){
 			    offset={-70}
 			    duration={500}
 					>
-					<Button title="Хочу резюме" styleName={"alt"} 
-					onClick={()=>ym(90739912,'reachGoal','i-want-cv')} />
+					<Button 
+					title="Хочу резюме" 
+					styleName={"alt"} 
+					onClick={()=>ym(90739912,'reachGoal','i-want-cv')}
+					/>
 				</Link>
 			</Container>
 		</section>
