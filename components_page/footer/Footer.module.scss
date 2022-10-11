@@ -16,6 +16,9 @@
 			flex-direction: column;
 			justify-content: space-between;
 			.logo {
+				font-family: 'main500';
+				font-size: 40px;
+				line-height: 40px;
 				@media (max-width: 899px) {
 					margin-bottom: 60px;
 				}
@@ -51,6 +54,10 @@
 		.alink {
 			// border: 1px solid red;
 			display: inline-block;
+			transition: .35s;
+			&:hover {
+				color: $textAcc
+			}
 		}
 
 

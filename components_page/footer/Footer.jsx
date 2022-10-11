@@ -23,12 +23,13 @@ export function Footer(){
 					xs={12}
 					md={3}
 					>
-	          <div>
-							<img 
+	          <div className={styles.logo} >
+							TalentBro
+							{/* <img 
 							className={styles.logo} 
 							src={logo.src} 
 							alt="logo" 
-							/>
+							/> */}
 						</div>
 						<div className={styles.copyrightDesktop}>© TalentBro 2022</div>
 	        </Grid>

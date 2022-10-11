@@ -22,14 +22,14 @@ export function Banner(){
 					Поверь в свой талант с TalentBro!
 				</header>
 				<Link
-			    activeClass="active"
+			    // activeClass="active"
 			    to={'contactform'}
 			    spy={true}
 			    smooth={true}
 			    offset={-70}
 			    duration={500}
 					>
-					<Button title="Хочу резюме" />
+					<Button title="Хочу резюме" styleName={"alt"}/>
 				</Link>
 			</Container>
 		</section>

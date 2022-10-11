@@ -69,7 +69,7 @@ export function Advances2(){
 						    smooth={true}
 						    offset={-70}
 						    duration={500}
-								>
+							>
 								<Button title={'Заказать'} />
 							</Link>
 						</div>

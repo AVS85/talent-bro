@@ -7,11 +7,16 @@ export function Button({
 	type,
 	isDisabled = false,
 }){
+
+	console.log('styleName', styleName);
 	return (
 		<section className={styles.wrapper}>
 			<button
 			disabled={isDisabled}
-			className={`${styles.button} ${styles[styleName]}`}
+			className={`
+			${styles.button}
+			${styles[styleName]}
+			`}
 			type={type}
 			onClick={onClick}>{title}</button>
 		</section>

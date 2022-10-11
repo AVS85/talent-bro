@@ -13,19 +13,41 @@
 		min-width: 250px;
 		padding: 10px 45px;
 		cursor: pointer;
+		transition: .1s;
 		&.alt {
 			background: transparent;
-			border: 2px solid $elemAcc;
-			color: $textAcc;
-			font-size: 15px;
-			line-height: 15px;
-			font-family: 'main500';
+			border: 2px solid #fff;
+			color: $textAlt;
+			font-size: 26px;
+			line-height: 26px;
+			font-family: 'main400';
+			&:hover {
+				opacity: .85;
+			}
+			&:active {
+				background: #fff ;
+				border: 2px solid $elemAcc;
+				color: $textAcc;
+				opacity: 1;
+			}
 		}
+
 		&:disabled {
 			background: $bgAcc !important;
 			border: 2px solid $bgAcc;
 			filter: grayscale(1);
 			cursor: default;
 		}
+		&:hover {
+			filter: grayscale(.15);
+		}
+		&:active {
+			background: transparent;
+			border: 2px solid $elemAcc;
+			color: $textAcc;
+			filter: grayscale(0);
+		}
+
+
 	}
 }
