@@ -92,12 +92,12 @@
 				}
 				&.liOn {
 					&::before {
-						background: url(./assets/on.png);
+						background: url(./assets/on.svg);
 					}
 				}
 				&.liOff {
 					&::before {
-						background: url(./assets/off.png);
+						background: url(./assets/off.svg);
 					}
 				}
 			}

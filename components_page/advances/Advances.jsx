@@ -45,7 +45,7 @@ export function Advances(){
 				<Grid container xs={12}>
 
 					{/* LEFT */}
-	        <Grid item xs={12} md={6} >
+	        <Grid item xs={12} md={7} >
 						<Grid container>
 							<СmpGRID 
 							title="Общее впечатление" 
@@ -66,7 +66,7 @@ export function Advances(){
 
 
 					{/* RIGHT */}
-					<Grid item xs={12} md={6} className={styles.banner}>
+					<Grid item xs={12} md={5} className={styles.banner}>
 						<img className={styles.bg} src={bgImage.src} alt="" />
 	        </Grid>
 					{/* RIGHT end */}

@@ -10,12 +10,15 @@
 	}
 
 	.banner {
-		padding: 25px 15px ;
+		padding: 25px 15px 25px 35px;
+		// border: 1px solid red;
 		.bg {
 			width: 100%;
 		}
 		@media (max-width: 768px) {
 			margin-top: 25px;
+			padding: 25px 0;
+
 		}
 	}
 

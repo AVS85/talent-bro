@@ -85,9 +85,10 @@
 	.buttonWrapper {
 		display: flex;
 		margin-bottom: 36px;
-		@media (max-width: 768px) {
+		// border: 1px solid red;
+		// @media (max-width: 768px) {
 			// background-size: 90px;
-			justify-content: center;
-		}
+			// justify-content: center;
+		// }
 	}
 }

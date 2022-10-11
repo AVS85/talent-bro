@@ -11,7 +11,7 @@ export function Button({
 		<section className={styles.wrapper}>
 			<button
 			disabled={isDisabled}
-			className={`${styles[styleName]}`}
+			className={`${styles.button} ${styles[styleName]}`}
 			type={type}
 			onClick={onClick}>{title}</button>
 		</section>
