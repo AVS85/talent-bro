@@ -91,13 +91,13 @@ export function LogotypeCarousel(){
 					{
 						lt.map((item,index) => 
 						<SwiperSlide style={{height: 'auto'}} key={index}>
-							<dix className={styles.slidewrapper}>
+							<div className={styles.slidewrapper}>
 								<img 
 									className={styles.img}
 									src={`/assets/logotypes/${item.logo}`} 
 									alt={`${item.alt}`}
 								/>
-							</dix>
+							</div>
 						</SwiperSlide>)
 					}
 		    </Swiper>
