@@ -8,7 +8,6 @@ export function Button({
 	isDisabled = false,
 }){
 
-	console.log('styleName', styleName);
 	return (
 		<section className={styles.wrapper}>
 			<button
