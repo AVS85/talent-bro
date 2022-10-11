@@ -36,6 +36,11 @@ export function ScheduleRates(){
     },
   };
 
+	function onInitSwiper(swiper){
+		//если количество слайдов на экране = 1, то делаем активным второй слайд
+		if (swiper?.params?.slidesPerView === 1) swiper.slideTo(1);
+	}
+
 	return (
 		<section  id="schedulerates" className={styles.wrapper}>
 			<Container className={styles.container}>
@@ -52,6 +57,7 @@ export function ScheduleRates(){
 						className='swiperScheduleRates'
 			      spaceBetween={20}
 			      slidesPerView={1}
+						onInit={(swiper) => onInitSwiper(swiper)}
 			      // onSlideChange={() => console.log('slide change')}
 			      // onSwiper={(swiper) => console.log(swiper)}
 						// observeSlideChildren={true}
