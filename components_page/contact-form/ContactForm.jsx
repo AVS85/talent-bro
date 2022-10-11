@@ -22,7 +22,7 @@ export function ContactForm(){
 	const [phone, setPhone] = useState(null)
 
 	const [isMessageSend, setIsMessageSend] = useState(false)
-	const [isUnknownError, setIsUnknownError] = useState(true)
+	const [isUnknownError, setIsUnknownError] = useState(false)
 	const [isTimeOut, setIsTimeOut] = useState(false)
 
 	async function onSendForm(){

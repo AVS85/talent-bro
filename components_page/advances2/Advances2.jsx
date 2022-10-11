@@ -70,7 +70,10 @@ export function Advances2(){
 						    offset={-70}
 						    duration={500}
 							>
-								<Button title={'Заказать'} />
+								<Button 
+								title={'Заказать'} 
+								onClick={()=>ym(90739912,'reachGoal','order-cv')} 
+								/>
 							</Link>
 						</div>
 
