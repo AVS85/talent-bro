@@ -166,7 +166,7 @@ export function ContactForm(){
 								checked={isAccept} 
 								onChange={() => setIsAccept(!isAccept)} 
 								/>
-								<div>Я принимаю условия оферты</div>
+								<div>Я принимаю условия использования сайта</div>
 							</Box>
 
 							<Button 
