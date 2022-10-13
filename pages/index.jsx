@@ -25,11 +25,11 @@ export default function Home() {
 
 
 			<Menu />
-			{/* <Main />
+			<Main />
 			<Advances />
 			<Advances2 />
 			<ScheduleRates />
-			<Userflow /> */}
+			<Userflow />
 			<LogotypeCarousel />
 			<Feedback />
 			<Banner />
