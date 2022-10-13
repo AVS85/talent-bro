@@ -97,9 +97,7 @@ export function ContactForm(){
 						<div className={styles.titleWrapper}>
 							<div className={styles.title}>Доверьте ваше<br/>резюме</div>
 						</div>
-						<div className={styles.logo}>
-							<img src={talentbro.src} alt="" />
-						</div>
+						<div className={styles.logo}>TalentBro</div>
 	        </Grid>
 
 	        <Grid item

@@ -105,7 +105,7 @@ export function Feedback(){
 							spaceBetween: 40
 						},
 						998: {
-							slidesPerView: 3,
+							slidesPerView: 2,
 							spaceBetween: 40
 						}
 					}}

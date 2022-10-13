@@ -38,12 +38,16 @@
 			}
 		} //.titleWrapper
 
+
+
 		.logo {
-			// border: 1px solid red;
-			max-width: 302px;
-			width: 100%;
-			@media (max-width: 899px) {
-				padding-bottom: 60px;
+			font-family: 'main700';
+			font-size: 60px;
+			line-height: 60px;
+			letter-spacing: 0.03em;
+			@media (max-width: 768px) {
+				font-size: 55px;
+				line-height: 55px;
 			}
 		} //.logo
 

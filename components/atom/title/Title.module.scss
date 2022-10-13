@@ -27,5 +27,9 @@
 		font-size: 20px;
 		line-height: 20px;
 		margin-top: 24px;
+		@media (max-width: 768px) {
+			font-size: 18px;
+			line-height: 20px;
+		}
 	}
 }

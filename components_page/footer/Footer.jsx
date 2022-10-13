@@ -23,14 +23,7 @@ export function Footer(){
 					xs={12}
 					md={3}
 					>
-	          <div className={styles.logo} >
-							TalentBro
-							{/* <img 
-							className={styles.logo} 
-							src={logo.src} 
-							alt="logo" 
-							/> */}
-						</div>
+	          <div className={styles.logo}>TalentBro</div>
 						<div className={styles.copyrightDesktop}>© TalentBro 2022</div>
 	        </Grid>
 
@@ -39,17 +32,18 @@ export function Footer(){
 					xs={12}
 					md={4}
 					>
-						<ul className={`${styles.ul}`}>
-							<li className={`${styles.li} ${styles.liSelect}`}><b>Реквизиты</b></li>
-							{/* <li>Договор-оферта</li> */}
-							<li className={`${styles.li}`}>
+						<ul className={styles.ul}>
+							<li className={styles.li}>Реквизиты</li>
+							<li className={styles.li}>
 								<a className={styles.alink}
 								href="/assets/documents/privacy_policy.pdf"
-								target="_blank">Политика конфиденциальности</a></li>
-							<li className={`${styles.li}`}>
+								target="_blank">Политика конфиденциальности</a>
+							</li>
+							<li className={styles.li}>
 								<a className={styles.alink}
 								href="/assets/documents/terms_of_service.pdf"
-								target="_blank">Условия использования</a></li>
+								target="_blank">Условия использования</a>
+							</li>
 						</ul>
 	        </Grid>
 
@@ -58,9 +52,9 @@ export function Footer(){
 					xs={12}
 					md={4} 
 					>
-						<ul className={`${styles.ul}`}>
-							<li className={`${styles.li}`}><b>Контакты</b></li>
-							<li className={`${styles.li}`}>
+						<ul className={styles.ul}>
+							<li className={styles.li}>Контакты</li>
+							<li className={styles.li}>
 								<a className={styles.alink}
 								href="mailto:hello.talentbro@gmail.com">hello.talentbro@gmail.com</a>
 							</li>

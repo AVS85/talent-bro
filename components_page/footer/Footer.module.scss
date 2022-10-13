@@ -16,7 +16,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			.logo {
-				font-family: 'main500';
+				font-family: 'main700';
 				font-size: 40px;
 				line-height: 40px;
 				@media (max-width: 899px) {
@@ -74,9 +74,11 @@
 			margin: 0;
 			.li {
 				color: $textGrey;
+				font-family: "main400";
 				padding: 0 0 20px 0;
-				&.liSelect {
-					color: $textAcc;
+				&:first-child {
+					font-family: "main500";
+					// font-size: 26px;
 				}
 			}
 		}

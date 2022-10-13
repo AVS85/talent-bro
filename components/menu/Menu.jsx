@@ -1,28 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 //nextjs
 import styles from './Menu.module.scss'
-// import styles2 from './Feedback.scss'
 //mui
-import { Box, Container, TextField } from '@mui/material';
-// import Grid from '@mui/material/Unstable_Grid2';
-//swiper
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Pagination } from "swiper";
-// import 'swiper/css';
-// import "swiper/css/pagination";
-//scroll
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Box, Container } from '@mui/material';
 //own
 import {PopDownList} from './cmpPopDownList/PopDownList'
 import {MobileMenu} from './cmpMobileMenu/MobileMenu'
-// import {Input} from '../../components/atom/input/Input'
-// import {Title} from '../../components/atom/title/Title'
-// import {ScheduleRatesCard} from './cmpScheduleRatesCard/ScheduleRatesCard'
 
 //assets
-// import bgImage from './assets/bg.jpg'
-// import bird from './assets/bird.png'
-// import hand from './assets/hand.png'
 import burger from './assets/burger.svg'
 import close from './assets/close.svg'
 

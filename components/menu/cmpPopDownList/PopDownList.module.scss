@@ -2,15 +2,13 @@
 
 .popDownMenuWrapper {
 	// border: 1px solid $textGrey;
-	// width: calc(100% + 10px);
 	position: relative;
 	// &:hover {
 	// }
 	.title {
 		// border: 1px solid $textGrey;
-
 		color: $textGrey;
-		font-family: 'main500';
+		font-family: 'main400';
 		font-size: 20px;
 		line-height: 20px;
 		padding: 5px 15px;
@@ -26,7 +24,6 @@
 	.itemsBox {
 		// border: 1px solid $textGrey;
 		background-color: $bgAlt;
-
 		position: absolute;
 		left: 0px;
 		top: 100%;
@@ -37,8 +34,10 @@
 			font-size: 15px;
 			line-height: 15px;
 			padding: 5px 0 5px 15px;
-			// margin: 1px 0;
 			cursor: pointer;
+			&:first-child {
+				margin-top: 10px;
+			}
 			&:hover {
 				color: $textAlt;
 				background-color: $elemAcc;
