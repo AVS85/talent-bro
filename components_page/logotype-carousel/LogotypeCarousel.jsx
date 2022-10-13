@@ -5,6 +5,8 @@ import { Box, Container, TextField } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from "swiper";
+
 import 'swiper/css';
 import "swiper/css/pagination";
 //own
@@ -54,6 +56,11 @@ export function LogotypeCarousel(){
 		      spaceBetween={40}
 					// slidesPerView={"auto"}
 		      slidesPerView={1}
+					speed={1500}
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: false,
+					}}
 					// loop={true}
 		      // onSlideChange={() => console.log('slide change')}
 		      // onSwiper={(swiper) => console.log(swiper)}
@@ -64,7 +71,7 @@ export function LogotypeCarousel(){
 					// pagination={{
 					// 	dynamicBullets: true,
 					// }}
-					// modules={[Pagination]}
+					modules={[Autoplay]}
 					// navigation={{
 					// 	nextEl: navigationNextRef.current,
 					// }}
