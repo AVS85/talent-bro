@@ -25,7 +25,8 @@ export function ContactForm(){
 	const [isUnknownError, setIsUnknownError] = useState(false)
 	const [isTimeOut, setIsTimeOut] = useState(false)
 
-	async function onSendForm(){
+	async function onSendForm(e){
+		e.preventDefault()
 		//TODO проверка на заполнение формы
 		let data = {
 			name,
@@ -34,7 +35,7 @@ export function ContactForm(){
 			// "g-recaptcha-response": this.token
 			// "g-recaptcha-response": grecaptcha.getResponse()
 		}
-
+		// console.log('data', data);
 		const response = await axios({
       method: "POST",
       url: `https://getform.io/f/3fb0ea34-2a92-41eb-a7e5-e3934ac8664a`,
@@ -104,80 +105,84 @@ export function ContactForm(){
 					xs={12}
 					md={6}
 					>
-						<div className={styles.formWrapper}>
-							{isMessageSend && 
-								<div className={styles.notificationWrapper}>
-									<div><b>Сообщение успешно отправлено!</b></div>
-									<div>Повторная отправка возможна через 60 секунд.</div>
-								</div>
-							}
-							{isUnknownError && 
-								<div className={styles.notificationWrapper}>
-									<div><b>Что то пошло не так...!</b></div>
-									<div>Попробуйте отправить сообщение позднее</div>
-									<div>Или напишите нам в телеграмм :)</div>
-								</div>
-							}
-							{isTimeOut && 
-								<div className={styles.notificationWrapper}>
-									<div>Повторная отправка возможна через 60 секунд.</div>
-								</div>
-							}
-								
-							<Box sx={{pb: '20px'	}}>
-								<Input type="text" name="name" placeholder="Ваше имя*"
-								onChange={(e)=> setName(e.target.value)} 
-								/>
-							</Box>
+						<form onSubmit={onSendForm}>
 
-							<Box sx={{pb: '20px'	}}>
-								<Input type="email" name="email" placeholder="E-mail*"
-								onChange={(e)=> setEmail(e.target.value)} 
-								/>
-							</Box>
-
-							<Box sx={{pb: '20px'	}}>
-								<Input type="text" name="phone" placeholder="Телефон" 
-								onChange={(e)=> setPhone(e.target.value)} 
-								/>
-							</Box>
-
-							{/* <Box className={styles.attachedBox}>
-								<div>
-									<span>Прикрепите&nbsp;резюме<br />PDF, DOCX</span>
-								</div>
-								<div>
-									<input 
-									type="file" 
-									name="file" 
-									accept=".pdf, .doc, .docx" 
-									placeholder="Телефон"
+							<div className={styles.formWrapper}>
+								{isMessageSend && 
+									<div className={styles.notificationWrapper}>
+										<div><b>Сообщение успешно отправлено!</b></div>
+										{/* <div>Повторная отправка возможна через 60 секунд.</div> */}
+									</div>
+								}
+								{isUnknownError && 
+									<div className={styles.notificationWrapper}>
+										<div><b>Что то пошло не так...!</b></div>
+										<div>Попробуйте отправить сообщение позднее</div>
+										<div>Или напишите нам в телеграмм :)</div>
+									</div>
+								}
+								{isTimeOut && 
+									<div className={styles.notificationWrapper}>
+										<div>Повторная отправка возможна через 60 секунд.</div>
+									</div>
+								}
+									
+								<Box sx={{pb: '20px'	}}>
+									<Input type="text" name="name" placeholder="Ваше имя*" required={true}
+									onChange={(e)=> setName(e.target.value)} 
 									/>
-								</div>
-							</Box> */}
+								</Box>
+
+								<Box sx={{pb: '20px'	}}>
+									<Input type="email" name="email" placeholder="E-mail*" required={true}
+									onChange={(e)=> setEmail(e.target.value)} 
+									/>
+								</Box>
+
+								<Box sx={{pb: '20px'	}}>
+									<Input type="text" name="phone" placeholder="Телефон" 
+									onChange={(e)=> setPhone(e.target.value)} 
+									/>
+								</Box>
+
+								{/* <Box className={styles.attachedBox}>
+									<div>
+										<span>Прикрепите&nbsp;резюме<br />PDF, DOCX</span>
+									</div>
+									<div>
+										<input 
+										type="file" 
+										name="file" 
+										accept=".pdf, .doc, .docx" 
+										placeholder="Телефон"
+										/>
+									</div>
+								</Box> */}
 
 
-							<Box sx={{
-								m: '30px 0',
-								display: 'flex',
-							}}>
-								<input 
-								type="checkbox" 
-								checked={isAccept} 
-								onChange={() => setIsAccept(!isAccept)} 
+								<Box sx={{
+									m: '30px 0',
+									display: 'flex',
+								}}>
+									<input 
+									type="checkbox" 
+									checked={isAccept} 
+									onChange={() => setIsAccept(!isAccept)} 
+									/>
+									<div>Я принимаю условия использования сайта</div>
+								</Box>
+
+								<Button 
+								isDisabled={!isAccept}
+								type="submit" 
+								// styleName="alt" 
+								title="Отправить" 
+								// onClick={onSendForm}
 								/>
-								<div>Я принимаю условия использования сайта</div>
-							</Box>
 
-							<Button 
-							isDisabled={!isAccept}
-							// type="submit" 
-							// styleName="alt" 
-							title="Отправить" 
-							onClick={onSendForm}
-							/>
+							</div>
 
-						</div>
+						</form>
 						
 	        </Grid>
 

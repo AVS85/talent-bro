@@ -12,7 +12,8 @@ export function Input({
 	onClick = () => {},
 	onChange = () => {},
 	onInput = () => {},
-	styleName = 'default'
+	styleName = 'default',
+	required = false,
 }){
 	return (
 		<section className={styles.wrapper}>
@@ -25,6 +26,7 @@ export function Input({
 			onClick={onClick}
 			onChange={onChange}
 			onInput={onInput}
+			required={required && 'required'}
 			/>
 		</section>
 	)
