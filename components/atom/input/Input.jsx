@@ -14,11 +14,15 @@ export function Input({
 	onInput = () => {},
 	styleName = 'default',
 	required = false,
+	defaultValue,
+	inpRef, 
 }){
 	return (
 		<section className={styles.wrapper}>
 			<input 
 			className={styles.input} 
+			defaultValue={defaultValue}
+			ref={inpRef}
 			type={type} 
 			name={name}
 			accept={accept}

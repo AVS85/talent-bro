@@ -1,6 +1,6 @@
 
 import styles from './ContactForm.module.scss'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 //MUI
 import { Box, Container, TextField } from '@mui/material';
 // import Box from '@mui/material/Box';
@@ -25,6 +25,8 @@ export function ContactForm(){
 	const [isUnknownError, setIsUnknownError] = useState(false)
 	const [isTimeOut, setIsTimeOut] = useState(false)
 
+	const inpRef = useRef([])
+
 	async function onSendForm(e){
 		e.preventDefault()
 		//TODO проверка на заполнение формы
@@ -38,7 +40,8 @@ export function ContactForm(){
 		// console.log('data', data);
 		const response = await axios({
       method: "POST",
-      url: `https://getform.io/f/3fb0ea34-2a92-41eb-a7e5-e3934ac8664a`,
+      url: `https://getform.io/f/3fb0ea34-2a92-41eb-a7e5-e3934ac8664a`, // original
+			// url: `https://getform.io/f/3fb0ea34-2a92-41eb-a7e5-e3934ac8664a222`, // test error
       data
     })
     .then(response => {
@@ -56,7 +59,13 @@ export function ContactForm(){
 
 		switch (response.status) {
 			case 200:
-				// console.log('Успешно отправлено')
+				// очистка введеных значений
+				setName(null)
+				setEmail(null)
+				setPhone(null)
+				// очистка полей формы 
+				inpRef.current.forEach(el => el.value = '')
+				// 
 				setIsMessageSend(true)
 				setTimeout(() => setIsMessageSend(false), 60000)
 				break;
@@ -110,15 +119,14 @@ export function ContactForm(){
 							<div className={styles.formWrapper}>
 								{isMessageSend && 
 									<div className={styles.notificationWrapper}>
-										<div><b>Сообщение успешно отправлено!</b></div>
-										{/* <div>Повторная отправка возможна через 60 секунд.</div> */}
+										<div><b>Ваша заявка принята.</b></div>
+										<div>Свяжемся с вами в течение нескольких часов!</div>
 									</div>
 								}
 								{isUnknownError && 
 									<div className={styles.notificationWrapper}>
-										<div><b>Что то пошло не так...!</b></div>
-										<div>Попробуйте отправить сообщение позднее</div>
-										<div>Или напишите нам в телеграмм :)</div>
+										<div><b>Что-то пошло не так.</b></div>
+										<div>Напишите нам в телеграм <a href="https://t.me/kunovskaya" target="_blank"><b>@kunovskaya</b></a></div>
 									</div>
 								}
 								{isTimeOut && 
@@ -128,19 +136,30 @@ export function ContactForm(){
 								}
 									
 								<Box sx={{pb: '20px'	}}>
-									<Input type="text" name="name" placeholder="Ваше имя*" required={true}
+									<Input 
+									type="text" name="name" placeholder="Ваше имя*"
+									inpRef={el => inpRef.current[0] = el} 
+									defaultValue={name}
+									required={true}
 									onChange={(e)=> setName(e.target.value)} 
 									/>
 								</Box>
 
 								<Box sx={{pb: '20px'	}}>
-									<Input type="email" name="email" placeholder="E-mail*" required={true}
+									<Input 
+									type="email" name="email" placeholder="E-mail*" 
+									inpRef={el => inpRef.current[1] = el} 
+									defaultValue={email}
+									required={true}
 									onChange={(e)=> setEmail(e.target.value)} 
 									/>
 								</Box>
 
 								<Box sx={{pb: '20px'	}}>
-									<Input type="text" name="phone" placeholder="Телефон" 
+									<Input
+									type="text" name="phone" placeholder="Телефон" 
+									inpRef={el => inpRef.current[2] = el}
+									defaultValue={phone}
 									onChange={(e)=> setPhone(e.target.value)} 
 									/>
 								</Box>
