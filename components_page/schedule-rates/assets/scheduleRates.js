@@ -12,7 +12,7 @@ export const scheduleRates = [
 			{text: 'Переработка содержания резюме – структура, текст', icon: false},
 			{text: 'Исходник', icon: false},
 		],
-		cost: '5 000 р.',
+		cost: '6 000 р.',
 	},
 	{
 		header: 'Создать резюме',
@@ -40,7 +40,7 @@ export const scheduleRates = [
 			{text: 'Аудит и рекомендации по апгрейду профиля Linkedin',	icon: true},
 			{text: 'Тестовое интервью на английском с носителем языка',	icon: true},
 		],
-		cost: '15 500 р.',
+		cost: '20 000 р.',
 	},
 	// {
 	// 	header: 'Помогите разобраться, а дальше я сам',
